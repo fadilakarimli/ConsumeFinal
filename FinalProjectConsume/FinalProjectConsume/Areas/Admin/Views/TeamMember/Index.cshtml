@@ -1,0 +1,104 @@
+﻿@model IEnumerable<FinalProjectConsume.Models.TeamMember.TeamMember>
+
+<head>
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <div class="col-sm-12 col-xl-10">
+        <a asp-controller="TeamMember" asp-action="Create" asp-area="Admin" class="btn btn-success mb-3">Create</a>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Full Name</th>
+                    <th>Position</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr id="team-row-@item.Id">
+                        <td><img src="@item.Image" style="width:150px; height:100px; object-fit:cover;" /></td>
+                        <td>@item.FullName</td>
+                        <td>@item.Position</td>
+                        <td>
+                            <button type="button" class="btn btn-danger btn-sm btn-delete" data-id="@item.Id">Delete</button>
+                            <a class="btn btn-warning btn-sm" asp-controller="TeamMember" asp-action="Edit" asp-area="Admin" asp-route-id="@item.Id">Edit</a>
+                            <a class="btn btn-info btn-sm" asp-controller="TeamMember" asp-action="Detail" asp-area="Admin" asp-route-id="@item.Id">Detail</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const deleteButtons = document.querySelectorAll(".btn-delete");
+
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success me-2",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+        });
+
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const id = this.getAttribute("data-id");
+
+                swalWithBootstrapButtons.fire({
+                    title: "Are you sure?",
+                    text: "This team member will be deleted!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Yes, delete it!",
+                    cancelButtonText: "No, cancel!",
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        fetch(`/Admin/TeamMember/Delete/${id}`, {
+                            method: "POST"
+                        })
+                        .then(response => {
+                            if (response.ok) {
+                                document.getElementById(`team-row-${id}`).remove();
+                                swalWithBootstrapButtons.fire(
+                                    "Deleted!",
+                                    "Team member has been deleted.",
+                                    "success"
+                                );
+                            } else {
+                                swalWithBootstrapButtons.fire(
+                                    "Error!",
+                                    "An error occurred while deleting.",
+                                    "error"
+                                );
+                            }
+                        })
+                        .catch(error => {
+                            console.error("Error:", error);
+                            swalWithBootstrapButtons.fire(
+                                "Error!",
+                                "Something went wrong.",
+                                "error"
+                            );
+                        });
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                        swalWithBootstrapButtons.fire(
+                            "Cancelled",
+                            "Team member is safe.",
+                            "error"
+                        );
+                    }
+                });
+            });
+        });
+    });
+</script>

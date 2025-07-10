@@ -1,0 +1,21 @@
+﻿@model FinalProjectConsume.Models.SliderInfo.SliderInfo
+
+@{
+    ViewData["Title"] = "SliderInfo Detail";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px; max-width:600px;">
+    <h2>@ViewData["Title"]</h2>
+
+    <div class="mb-3">
+        <label class="form-label"><strong>Title:</strong></label>
+        <p>@Model.Title</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><strong>Description:</strong></label>
+        <p>@Model.Description</p>
+    </div>
+
+    <a asp-action="Index" asp-controller="SliderInfo" asp-area="Admin" class="btn btn-secondary">Back to List</a>
+</div>

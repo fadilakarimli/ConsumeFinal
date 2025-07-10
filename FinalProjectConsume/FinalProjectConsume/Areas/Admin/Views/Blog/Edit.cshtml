@@ -1,0 +1,51 @@
+﻿@model FinalProjectConsume.Models.Blog.BlogEdit
+
+@{
+    ViewData["Title"] = "Edit Blog";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>Edit Blog</h2>
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+       @*  <!-- Burada lazım olsa Id üçün gizli input əlavə edilə bilər -->
+        <input type="hidden" asp-for="Id" />
+ *@
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ShortDescription"></label>
+            <input asp-for="ShortDescription" class="form-control" />
+            <span asp-validation-for="ShortDescription" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Content"></label>
+            <textarea asp-for="Content" class="form-control" rows="5"></textarea>
+            <span asp-validation-for="Content" class="text-danger"></span>
+        </div>
+
+    @*     <div class="form-group">
+            <label asp-for="Author"></label>
+            <input asp-for="Author" class="form-control" />
+            <span asp-validation-for="Author" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CommentCount"></label>
+            <input asp-for="CommentCount" class="form-control" type="number" />
+            <span asp-validation-for="CommentCount" class="text-danger"></span>
+        </div> *@
+
+        <div class="form-group">
+            <label for="Image">Select New Image</label>
+            <input asp-for="Image" type="file" class="form-control" />
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+    </form>
+</div>

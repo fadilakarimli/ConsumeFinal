@@ -1,0 +1,378 @@
+﻿@model FinalProjectConsume.ViewModels.UI.RolePermissionVM
+
+@{
+    var roleName = ViewBag.RoleName as string;
+}
+<div class="container" style="margin-left:320px; margin-top:50px; max-width: 600px;">
+
+<h2>@roleName rolunun icazələri</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">@TempData["Message"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+
+    <form asp-action="Permissions" method="post">
+        <input type="hidden" name="roleName" value="@roleName" />
+
+        <div>
+            <label>Admin Paneli Görünmə:</label>
+            <input type="checkbox" asp-for="ShowAdminPanel" />
+        </div>
+        <div>
+            <label>Brand yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateBrand" />
+        </div>
+        <div>
+            <label>Brand silmək:</label>
+            <input type="checkbox" asp-for="DeleteBrand" />
+        </div>
+
+        <div>
+            <label>Instagram göstərmək:</label>
+            <input type="checkbox" asp-for="ShowInstagram" />
+        </div>
+
+        <div>
+            <label>Instagram yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateInstagram" />
+        </div>
+        <div>
+            <label>Instagram silmək:</label>
+            <input type="checkbox" asp-for="DeleteInstagram" />
+        </div>
+
+        <div>
+            <label>Blog göstərmək:</label>
+            <input type="checkbox" asp-for="ShowBlog" />
+        </div>
+        <div>
+            <label>Blog yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateBlog" />
+        </div>
+        <div>
+            <label>Blog silmək:</label>
+            <input type="checkbox" asp-for="DeleteBlog" />
+        </div>
+
+        <div>
+            <label>Destination göstərmək:</label>
+            <input type="checkbox" asp-for="ShowDestination" />
+        </div>
+     
+        <div>
+            <label>Destination yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateDestination" />
+        </div>
+        <div>
+            <label>Destination silmək:</label>
+            <input type="checkbox" asp-for="DeleteDestination" />
+        </div>
+
+        <div>
+            <label>Team Member göstərmək:</label>
+            <input type="checkbox" asp-for="ShowTeamMember" />
+        </div>
+      
+        <div>
+            <label>Team Member yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateTeamMember" />
+        </div>
+        <div>
+            <label>Team Member silmək:</label>
+            <input type="checkbox" asp-for="DeleteTeamMember" />
+        </div>
+
+        <div>
+            <label>Trending Destination göstərmək:</label>
+            <input type="checkbox" asp-for="ShowTrandingDestination" />
+        </div>
+      
+        <div>
+            <label>Trending Destination yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateTrandingDestination" />
+        </div>
+        <div>
+            <label>Trending Destination silmək:</label>
+            <input type="checkbox" asp-for="DeleteTrandingDestination" />
+        </div>
+
+        <div>
+            <label>Tour göstərmək:</label>
+            <input type="checkbox" asp-for="ShowTour" />
+        </div>
+        <div>
+            <label>Tour yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateTour" />
+        </div>
+        <div>
+            <label>Tour silmək:</label>
+            <input type="checkbox" asp-for="DeleteTour" />
+        </div>
+
+        <div>
+            <label>Slider göstərmək:</label>
+            <input type="checkbox" asp-for="ShowSlider" />
+        </div>
+      
+        <div>
+            <label>Slider yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateSlider" />
+        </div>
+        <div>
+            <label>Slider silmək:</label>
+            <input type="checkbox" asp-for="DeleteSlider" />
+        </div>
+
+        <div>
+            <label>Newsletter göstərmək:</label>
+            <input type="checkbox" asp-for="ShowNewsletter" />
+        </div>
+        <div>
+            <label>Newsletter silmək:</label>
+            <input type="checkbox" asp-for="DeleteNewsletter" />
+        </div>
+
+        <div>
+            <label>Activity göstərmək:</label>
+            <input type="checkbox" asp-for="ShowActivity" />
+        </div>
+   
+        <div>
+            <label>Activity yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateActivity" />
+        </div>
+        <div>
+            <label>Activity silmək:</label>
+            <input type="checkbox" asp-for="DeleteActivity" />
+        </div>
+
+        <div>
+            <label>Amenity göstərmək:</label>
+            <input type="checkbox" asp-for="ShowAmenity" />
+        </div>
+  
+        <div>
+            <label>Amenity yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateAmenity" />
+        </div>
+        <div>
+            <label>Amenity silmək:</label>
+            <input type="checkbox" asp-for="DeleteAmenity" />
+        </div>
+
+        <div>
+            <label>Countries göstərmək:</label>
+            <input type="checkbox" asp-for="ShowCountries" />
+        </div>
+   
+        <div>
+            <label>Countries yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateCountries" />
+        </div>
+        <div>
+            <label>Countries silmək:</label>
+            <input type="checkbox" asp-for="DeleteCountries" />
+        </div>
+
+        <div>
+            <label>Cities göstərmək:</label>
+            <input type="checkbox" asp-for="ShowCities" />
+        </div>
+    
+        <div>
+            <label>Cities yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateCities" />
+        </div>
+        <div>
+            <label>Cities silmək:</label>
+            <input type="checkbox" asp-for="DeleteCities" />
+        </div>
+
+        <div>
+            <label>Slider Info göstərmək:</label>
+            <input type="checkbox" asp-for="ShowSliderInfo" />
+        </div>
+      
+        <div>
+            <label>Slider Info yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateSliderInfo" />
+        </div>
+        <div>
+            <label>Slider Info silmək:</label>
+            <input type="checkbox" asp-for="DeleteSliderInfo" />
+        </div>
+
+        <div>
+            <label>Special Offer göstərmək:</label>
+            <input type="checkbox" asp-for="ShowSpecialOffer" />
+        </div>
+   
+        <div>
+            <label>Special Offer yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateSpecialOffer" />
+        </div>
+        <div>
+            <label>Special Offer silmək:</label>
+            <input type="checkbox" asp-for="DeleteSpecialOffer" />
+        </div>
+
+        <div>
+            <label>Experience göstərmək:</label>
+            <input type="checkbox" asp-for="ShowExperience" />
+        </div>
+        <div>
+            <label>Experience yaratmaq:</label>
+            <input type="checkbox" asp-for="CreateExperience" />
+        </div>
+        <div>
+            <label>Experience yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateExperience" />
+        </div>
+        <div>
+            <label>Experience silmək:</label>
+            <input type="checkbox" asp-for="DeleteExperience" />
+        </div>
+
+        <div>
+            <label>About Agency göstərmək:</label>
+            <input type="checkbox" asp-for="ShowAboutAgency" />
+        </div>
+        <div>
+            <label>About Agency yaratmaq:</label>
+            <input type="checkbox" asp-for="CreateAboutAgency" />
+        </div>
+        <div>
+            <label>About Agency yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateAboutAgency" />
+        </div>
+        <div>
+            <label>About Agency silmək:</label>
+            <input type="checkbox" asp-for="DeleteAboutAgency" />
+        </div>
+
+        <div>
+            <label>Choose Us About göstərmək:</label>
+            <input type="checkbox" asp-for="ShowChooseUsAbout" />
+        </div>
+        <div>
+            <label>Choose Us About yaratmaq:</label>
+            <input type="checkbox" asp-for="CreateChooseUsAbout" />
+        </div>
+        <div>
+            <label>Choose Us About yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateChooseUsAbout" />
+        </div>
+        <div>
+            <label>Choose Us About silmək:</label>
+            <input type="checkbox" asp-for="DeleteChooseUsAbout" />
+        </div>
+
+        <div>
+            <label>About Team göstərmək:</label>
+            <input type="checkbox" asp-for="ShowAboutTeam" />
+        </div>
+        <div>
+            <label>About Team yaratmaq:</label>
+            <input type="checkbox" asp-for="CreateAboutTeam" />
+        </div>
+        <div>
+            <label>About Team yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateAboutTeam" />
+        </div>
+        <div>
+            <label>About Team silmək:</label>
+            <input type="checkbox" asp-for="DeleteAboutTeam" />
+        </div>
+
+        <div>
+            <label>About Travil göstərmək:</label>
+            <input type="checkbox" asp-for="ShowAboutTravil" />
+        </div>
+        <div>
+            <label>About Travil yaratmaq:</label>
+            <input type="checkbox" asp-for="CreateAboutTravil" />
+        </div>
+        <div>
+            <label>About Travil yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateAboutTravil" />
+        </div>
+        <div>
+            <label>About Travil silmək:</label>
+            <input type="checkbox" asp-for="DeleteAboutTravil" />
+        </div>
+
+        <div>
+            <label>Plan göstərmək:</label>
+            <input type="checkbox" asp-for="ShowPlan" />
+        </div>
+        <div>
+            <label>Plan yaratmaq:</label>
+            <input type="checkbox" asp-for="CreatePlan" />
+        </div>
+        <div>
+            <label>Plan yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdatePlan" />
+        </div>
+        <div>
+            <label>Plan silmək:</label>
+            <input type="checkbox" asp-for="DeletePlan" />
+        </div>
+
+        <div>
+            <label>Contact göstərmək:</label>
+            <input type="checkbox" asp-for="ShowContact" />
+        </div>
+
+        <div>
+            <label>Review göstərmək:</label>
+            <input type="checkbox" asp-for="ShowReview" />
+        </div>
+        <div>
+            <label>Review silmək:</label>
+            <input type="checkbox" asp-for="DeleteReview" />
+        </div>
+
+        <div>
+            <label>User göstərmək:</label>
+            <input type="checkbox" asp-for="ShowUser" />
+        </div>
+        <div>
+            <label>User yaratmaq:</label>
+            <input type="checkbox" asp-for="CreateUser" />
+        </div>
+        <div>
+            <label>User yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateUser" />
+        </div>
+        <div>
+            <label>User silmək:</label>
+            <input type="checkbox" asp-for="DeleteUser" />
+        </div>
+
+        <div>
+            <label>Booking göstərmək:</label>
+            <input type="checkbox" asp-for="ShowBooking" />
+        </div>
+        <div>
+            <label>Booking yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateBooking" />
+        </div>
+
+        <div>
+            <label>Setting göstərmək:</label>
+            <input type="checkbox" asp-for="ShowSetting" />
+        </div>
+        <div>
+            <label>Setting yeniləmək:</label>
+            <input type="checkbox" asp-for="UpdateSetting" />
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">İcazələri Yadda Saxla</button>
+    </form>
+</div>

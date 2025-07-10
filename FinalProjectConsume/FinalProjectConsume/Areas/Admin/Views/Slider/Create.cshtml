@@ -1,0 +1,12 @@
+﻿@model FinalProjectConsume.Models.Slider.SliderCreate
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Img"></label>
+            <input asp-for="Img" type="file" class="form-control" />
+            <span asp-validation-for="Img" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-success">Create</button>
+    </form>
+</div>

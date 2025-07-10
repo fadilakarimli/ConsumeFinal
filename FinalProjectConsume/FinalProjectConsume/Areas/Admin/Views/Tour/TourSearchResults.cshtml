@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Tour>
+
+<div class="search-results">
+    @foreach (var tour in Model)
+    {
+        <div class="tour-item">
+            <h4>@tour.Name</h4>
+            <p>Price: @tour.Price</p>
+            <p>Duration: @tour.Duration</p>
+            <p>City: @string.Join(", ", tour.CityNames)</p>
+            <p>Activity: @string.Join(", ", tour.ActivityNames)</p>
+        </div>
+    }
+</div>

@@ -1,0 +1,48 @@
+﻿@model FinalProjectConsume.Models.Tour.TourSearchRequest
+
+<h2>Search Tours</h2>
+<div class="container" style="margin-left:300px; margin-top:50px;">
+
+    <form method="get" asp-controller="Tour" asp-action="SearchResults" asp-area="Admin">
+       @*  <div>
+            <label>Name:</label>
+            <input type="text" name="Name" value="@Model.Name" />
+        </div> *@
+
+        <div>
+            <label>City:</label><br />
+            @foreach (var city in Model.AvailableCities)
+            {
+                <input type="checkbox" name="CityIds" value="@city.Id"
+                @(Model.CityIds != null && Model.CityIds.Contains(city.Id) ? "checked" : "") />
+                <label>@city.Name</label>
+
+                <br />
+            }
+        </div>
+
+        <div>
+            <label>Activity:</label><br />
+            @foreach (var activity in Model.AvailableActivities)
+            {
+                <input type="checkbox" name="ActivityIds" value="@activity.Id"
+                @(Model.ActivityIds != null && Model.ActivityIds.Contains(activity.Id) ? "checked" : "") />
+                <label>@activity.Name</label>
+
+                <br />
+            }
+        </div>
+
+        <div>
+            <label>Capacity:</label>
+            <input type="number" name="Capacity" value="@Model.Capacity" />
+        </div>
+
+        <div>
+            <label>Start Date:</label>
+            <input type="date" name="StartDate" value="@(Model.StartDate?.ToString("yyyy-MM-dd"))" />
+        </div>
+
+        <button type="submit">Search</button>
+    </form>
+</div>

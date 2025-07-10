@@ -1,0 +1,24 @@
+﻿@model FinalProjectConsume.Models.ChooseUsAbout.ChooseUsAbout
+
+@{
+    ViewData["Title"] = "Choose Us About Detay";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h3>@Model.Title</h3>
+    <h4>@Model.Subtitle</h4>
+    <p><strong>Description:</strong> @Model.Desc</p>
+    <p><strong>Sub Description:</strong> @Model.SubDesc</p>
+    <p><strong>Text:</strong></p>
+    <p>@Model.Text</p>
+
+    @if (!string.IsNullOrEmpty(Model.Image))
+    {
+        <img src="@Model.Image" alt="Image" style="max-width: 400px; height: auto;" />
+    }
+    <a asp-action="Index" class="btn btn-secondary mt-3">Geri</a>
+
+</div>
+

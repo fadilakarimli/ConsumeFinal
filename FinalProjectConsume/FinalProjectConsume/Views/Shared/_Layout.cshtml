@@ -1,0 +1,197 @@
+﻿@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+
+<!DOCTYPE html>
+<html lang="en">
+<!--<< Header Area >>-->
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="modinatheme">
+    <meta name="description" content="Travil - Travel & Tour Booking Html Template">
+    <!-- ======== Page title ============ -->
+    <title>Travil - Travel & Tour Booking Html Template</title>
+    <!--<< Favicon >>-->
+    <link rel="shortcut icon" href="~/assets/img/favicon.svg">
+    <!--<< Bootstrap min.css >>-->
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <!--<< Font Awesome.css >>-->
+    <link rel="stylesheet" href="~/assets/css/font-awesome.css">
+    <!--<< Animate.css >>-->
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <!--<< Magnific Popup.css >>-->
+    <link rel="stylesheet" href="~/assets/css/magnific-popup.css">
+    <!--<< MeanMenu.css >>-->
+    <link rel="stylesheet" href="~/assets/css/meanmenu.css">
+    <!--<< Odometer.css >>-->
+    <link rel="stylesheet" href="~/assets/css/odometer.css">
+    <!--<< Swiper Bundle.css >>-->
+    <link rel="stylesheet" href="~/assets/css/swiper-bundle.min.css">
+    <!--<< DatePicker.css >>-->
+    <link rel="stylesheet" href="~/assets/css/datepickerboot.css">
+    <!--<< Nice Select.css >>-->
+    <link rel="stylesheet" href="~/assets/css/nice-select.css">
+    <!--<< Main.css >>-->
+    <link rel="stylesheet" href="~/assets/css/main.css">
+    <!--<< Style.css >>-->
+    <link rel="stylesheet" href="~/style.css">
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">
+            </div>
+            <div class="txt-loading">
+                <span data-text-preloader="T" class="letters-loading">
+                    T
+                </span>
+                <span data-text-preloader="R" class="letters-loading">
+                    R
+                </span>
+                <span data-text-preloader="A" class="letters-loading">
+                    A
+                </span>
+                <span data-text-preloader="V" class="letters-loading">
+                    V
+                </span>
+                <span data-text-preloader="I" class="letters-loading">
+                    I
+                </span>
+                <span data-text-preloader="L" class="letters-loading">
+                    L
+                </span>
+            </div>
+            <p class="text-center">Loading</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Back To Top start -->
+    <button id="back-top" class="back-to-top">
+        <i class="fas fa-long-arrow-up"></i>
+    </button>
+    <!-- Offcanvas Area Start -->
+    <div class="fix-area">
+        <div class="offcanvas__info">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo">
+                            <a href="index.html">
+                                <img src="~/assets/img/logo/black-logo.svg" alt="logo-img">
+                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="offcanvas-title">Hello There!</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, </p>
+                    <div class="mobile-menu fix mb-3"></div>
+                    <div class="offcanvas__contact">
+                        <h3>Get Appointment</h3>
+                        <form action="#" id="contact-form" method="POST" class="contact-form-items">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="form-clt">
+                                        <input type="text" name="name" id="name33" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-clt">
+                                        <input type="text" name="name" id="email33" placeholder="Email Address">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-clt">
+                                        <textarea name="message" id="message2" placeholder="Enter message..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+    <!-- Header Section Start -->
+    @await Component.InvokeAsync("Basket")
+    @await Component.InvokeAsync("Header")
+
+            @RenderBody()
+    <!-- Footer Section Start -->
+    @await Component.InvokeAsync("Footer")
+
+
+    <!--<< All JS Plugins >>-->
+    <script src="~/assets/js/jquery-3.7.1.min.js"></script>
+    <!--<< Bootstrap Js >>-->
+    <script src="~/assets/js/bootstrap.bundle.min.js"></script>
+    <!--<< Nice Select Js >>-->
+    <script src="~/assets/js/jquery.nice-select.min.js"></script>
+    <!--<< Odometer Js >>-->
+    <script src="~/assets/js/odometer.min.js"></script>
+    <!--<< Appear Js >>-->
+    <script src="~/assets/js/jquery.appear.min.js"></script>
+    <!--<< Datepicker Js >>-->
+    <script src="~/assets/js/bootstrap-datepicker.js"></script>
+    <!--<< Swiper Slider Js >>-->
+    <script src="~/assets/js/swiper-bundle.min.js"></script>
+    <!--<< MeanMenu Js >>-->
+    <script src="~/assets/js/jquery.meanmenu.min.js"></script>
+    <!--<< Magnific Popup Js >>-->
+    <script src="~/assets/js/jquery.magnific-popup.min.js"></script>
+    <!--<< Wow Animation Js >>-->
+    <script src="~/assets/js/wow.min.js"></script>
+    <!--<< Main.js >>-->
+    <script src="~/assets/js/main.js"></script>
+    <script src="~/admin/js/custom.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+<script>
+    function showAuthOptions() {
+        var authDiv = document.getElementById("auth-options");
+        if (authDiv.style.display === "none" || authDiv.style.display === "") {
+            authDiv.style.display = "block";
+        } else {
+            authDiv.style.display = "none";
+        }
+    }
+
+    // Hide dropdown when clicking outside
+    document.addEventListener("click", function (event) {
+        var authDiv = document.getElementById("auth-options");
+        var button = event.target.closest("li");
+        if (!button || !button.contains(authDiv)) {
+            authDiv.style.display = "none";
+        }
+    });
+</script>

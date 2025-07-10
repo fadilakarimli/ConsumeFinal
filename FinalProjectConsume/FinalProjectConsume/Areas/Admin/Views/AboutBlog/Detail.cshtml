@@ -1,0 +1,22 @@
+﻿@model FinalProjectConsume.Models.AboutBlog.AboutBlog
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>About Blog Details</h2>
+
+    <div class="form-group">
+        <label>Name:</label>
+        <p>@Model.Name</p>
+    </div>
+
+    <div class="form-group">
+        <label>Description:</label>
+        <p>@Model.Desc</p>
+    </div>
+
+    <div class="form-group">
+        <label>Image:</label><br />
+        <img src="@Model.Image" alt="Blog Image" style="max-width: 300px; max-height: 200px; object-fit: cover;" />
+    </div>
+
+    <a asp-action="Index" asp-controller="AboutBlog" asp-area="Admin" class="btn btn-secondary mt-3">Back to List</a>
+</div>

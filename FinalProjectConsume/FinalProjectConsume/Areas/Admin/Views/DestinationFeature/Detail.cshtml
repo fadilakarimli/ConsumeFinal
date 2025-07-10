@@ -1,0 +1,27 @@
+﻿@model FinalProjectConsume.Models.DestinationFeature.DestinationFeature
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>Destination Feature Details</h2>
+
+    <div class="form-group">
+        <label>Title:</label>
+        <p>@Model.Title</p>
+    </div>
+
+    <div class="form-group">
+        <label>Tour Count:</label>
+        <p>@Model.TourCount</p>
+    </div>
+
+    <div class="form-group">
+        <label>Price From:</label>
+        <p>@Model.PriceFrom.ToString("C")</p> @* C = currency format *@
+    </div>
+
+    <div class="form-group">
+        <label>Icon Image:</label><br />
+        <img src="@Model.IconImage" alt="Icon Image" style="max-width: 150px;" />
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary mt-3">Back to List</a>
+</div>

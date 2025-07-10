@@ -1,0 +1,48 @@
+﻿@model IEnumerable<FinalProjectConsume.Models.Product.Product>
+
+@{
+    ViewData["Title"] = "Məhsullar";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="container" style="margin-left:200px; margin-top:50px;">
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Yeni Məhsul Əlavə et</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Şəkil</th>
+            <th>Ad</th>
+            <th>Qiymət</th>
+            <th>Əməliyyatlar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>
+                    @if (!string.IsNullOrEmpty(product.Image))
+                    {
+                        <img src="@product.Image" alt="@product.Name" width="100" />
+                    }
+                </td>
+                <td>@product.Name</td>
+                <td>@product.Price.ToString("C")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-sm btn-warning">Redaktə et</a>
+                    <form asp-action="Delete" asp-route-id="@product.Id" method="post" class="d-inline" onsubmit="return confirm('Məhsulu silmək istədiyinizə əminsiniz?');">
+                        <button type="submit" class="btn btn-sm btn-danger">Sil</button>
+                    </form>
+                    <a asp-action="Detail" asp-route-id="@product.Id" class="btn btn-sm btn-info">Ətraflı</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+</div>

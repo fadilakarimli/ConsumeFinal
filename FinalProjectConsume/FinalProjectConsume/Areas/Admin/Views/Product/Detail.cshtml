@@ -1,0 +1,20 @@
+﻿@model FinalProjectConsume.Models.Product.Product
+
+@{
+    ViewData["Title"] = "Məhsul haqqında";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+<h2>@Model.Name</h2>
+
+<div>
+    @if (!string.IsNullOrEmpty(Model.Image))
+    {
+        <img src="@Model.Image" alt="@Model.Name" width="300" />
+    }
+</div>
+
+<p><strong>Qiymət:</strong> @Model.Price.ToString("C")</p>
+
+<a asp-action="Index" class="btn btn-secondary">Geri</a>
+</div>

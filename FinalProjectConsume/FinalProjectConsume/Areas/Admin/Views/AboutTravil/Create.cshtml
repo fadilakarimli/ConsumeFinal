@@ -1,0 +1,48 @@
+﻿@model FinalProjectConsume.Models.AboutTravil.AboutTravilCreate
+
+@{
+    ViewData["Title"] = "Create About Travil";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>Create About Travil</h2>
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Desc"></label>
+            <textarea asp-for="Desc" class="form-control"></textarea>
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Subtitle"></label>
+            <input asp-for="Subtitle" class="form-control" />
+            <span asp-validation-for="Subtitle" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="SubDesc"></label>
+            <textarea asp-for="SubDesc" class="form-control"></textarea>
+            <span asp-validation-for="SubDesc" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Image">Main Image</label>
+            <input asp-for="Image" type="file" class="form-control" />
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="SmallImage">Small Image</label>
+            <input asp-for="SmallImage" type="file" class="form-control" />
+            <span asp-validation-for="SmallImage" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success mt-3">Create</button>
+    </form>
+</div>

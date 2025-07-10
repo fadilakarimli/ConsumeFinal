@@ -1,0 +1,107 @@
+﻿@model IEnumerable<FinalProjectConsume.Models.Plan.Plan>
+
+@{
+    ViewData["Title"] = "Plan List";
+}
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>@ViewData["Title"]</h2>
+
+    <p>
+          @if (User.IsInRole("SuperAdmin") || User.HasClaim("Permission", "CreatePlan"))
+          {
+             <a asp-action="Create" class="btn btn-success">Create</a>
+          }
+    </p>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Day</th>    
+                <th>Title</th>
+                <th>Description</th>
+                <th>Tour Name</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var plan in Model)
+            {
+                <tr id="plan-row-@plan.Id">
+                    <td>@plan.Day</td>
+                    <td>@plan.Title</td>
+                    <td>@plan.Description</td>
+                    <td>@plan.TourName</td>
+                    <td>
+
+
+                                 @if (User.IsInRole("SuperAdmin") || User.HasClaim("Permission", "DeletePlan"))
+                                 {
+                                        <button class="btn btn-danger btn-sm btn-delete" data-id="@plan.Id">Delete</button>
+
+                                 }
+                                 @if (User.IsInRole("SuperAdmin") || User.HasClaim("Permission", "UpdatePlan"))
+                                 {
+                                      <a asp-action="Edit" asp-route-id="@plan.Id" class="btn btn-warning btn-sm">Edit</a>
+                                 }
+
+                                  <a asp-action="Detail" asp-route-id="@plan.Id" class="btn btn-info btn-sm">Detail</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const deleteButtons = document.querySelectorAll(".btn-delete");
+
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success me-2",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+        });
+
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const id = this.getAttribute("data-id");
+
+                swalWithBootstrapButtons.fire({
+                    title: "Are you sure you want to delete this plan?",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Yes, delete it!",
+                    cancelButtonText: "No, cancel!",
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        fetch(`/Admin/Plan/Delete/${id}`, {
+                            method: "POST"
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    document.getElementById(`plan-row-${id}`).remove();
+                                    swalWithBootstrapButtons.fire("Deleted!", "Plan has been deleted.", "success");
+                                } else {
+                                    throw new Error("Something went wrong.");
+                                }
+                            })
+                            .catch(() => {
+                                swalWithBootstrapButtons.fire("Error!", "Something went wrong.", "error");
+                            });
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                        swalWithBootstrapButtons.fire("Cancelled", "Plan is safe :)", "info");
+                    }
+                });
+            });
+        });
+    });
+</script>

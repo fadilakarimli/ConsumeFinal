@@ -1,0 +1,464 @@
+﻿@model AboutPageVM 
+       
+
+<!-- Search Section Start -->
+<div class="header-search-bar d-flex align-items-center">
+    <button class="search-close">×</button>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="search-bar">
+                    <div class="contact-form-box contact-search-form-box">
+                        <form action="#">
+                            <input type="email" placeholder="Search here...">
+                            <button type="submit"><i class="far fa-search"></i></button>
+                        </form>
+                        <p>Type above and press Enter to search. Press Close to cancel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Breadcrumb Section Start -->
+<div class="breadcrumb-wrapper section-padding  bg-cover" style="background-image: url('/assets/img/tour/@Model.Settings.FirstOrDefault(x =>x.Key == "TourBanner")?.Value">
+
+    <div class="container-fluid">
+        <div class="page-heading">
+            <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <i class="far fa-slash"></i>
+                </li>
+                <li>
+                    About Travil
+                </li>
+            </ul>
+            <h1 class="wow fadeInUp" data-wow-delay=".5s">About Travil</h1>
+        </div>
+    </div>
+    <div class="plane-shape float-bob-x">
+        <img src="~/assets/img/@Model.Settings.FirstOrDefault(x =>x.Key == "TourBannerFly")?.Value">
+
+    </div>
+</div>
+
+
+<!--Choose Us Section Start -->
+@foreach (var item in Model.ChooseUsAbouts)
+{
+    <section class="choose-us-section section-padding">
+        <div class="container">
+            <div class="choose-us-wrapper">
+                <div class="row g-4">
+                    <div class="col-xl-5 col-lg-4 col-md-6">
+                        <div class="choose-us-left-content">
+                            <div class="section-title">
+                                <span class="wow fadeInUp">@item.Subtitle</span>
+                                <h2 class="wow fadeInUp" data-wow-delay=".3s">@item.Title</h2>
+                            </div>
+                            <p class="mt-4 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
+                                @item.Desc
+                            </p>
+                            @* Eğer liste gibi bir şey varsa, <ul> buraya eklenebilir *@
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="choose-us-img wow img-custom-anim-left">
+                            <img src="@item.Image" alt="img" />
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="choose-us-right">
+                            <h4 class="wow fadeInUp" data-wow-delay=".3s">@item.SubDesc</h4>
+                            <p class="wow fadeInUp" data-wow-delay=".5s">
+                                @item.Text
+                            </p>
+                            <div class="client-img wow fadeInUp" data-wow-delay=".3s">
+                                @* İstersen buraya ekstra içerik ekleyebilirsin *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+<!--  Marquee Section Start -->
+<div class="marquee-section fix section-padding pt-0">
+    <div class="marque-wrapper">
+        <div class="swiper text-slider">
+            <div class="swiper-wrapper slide-transtion">
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Mobile-Friendly Platform</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Eco-Friendly Travel Options</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Group Booking Discounts</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Real-Time Itinerary Updates</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Expert Travel Advisors</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Affordable Travel Deals</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Affordable Travel Deals</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="marque-wrapper style-2">
+        <div dir="rtl" class="swiper text-slider-2">
+            <div class="swiper-wrapper slide-transtion">
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Secure Online Booking</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Verified Customer Reviews</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>24/7 Customer Support</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Exclusive Travel Packages</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Special Member Discounts</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Local Destination Insights</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Affordable Travel Deals</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Destination Section Start -->
+<section class="destination-section-22 fix section-padding pt-0">
+    <div class="destination-wrapper-22">
+        <div class="swiper destination-auto-slider">
+            <div class="swiper-wrapper slide-transtion">
+                @foreach (var item in Model.AboutDestinations)
+                {
+                        <div class="swiper-slide brand-slide-element">
+                            <div class="destination-items">
+                                <div class="destination-thumb">
+                                    <img src="@item.Image" alt="img">
+                                </div>
+                                <div class="destination-content">
+                                    <h3><a href="destination-details.html">@item.Name</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="destination-wrapper-22 style-2">
+        <div dir="rtl" class="swiper destination-auto-slider-2">
+            <div class="swiper-wrapper slide-transtion">
+                @foreach (var item in Model.AboutDestinations)
+                {
+                        <div class="swiper-slide brand-slide-element">
+                            <div class="destination-items">
+                                <div class="destination-thumb style-2">
+                                    <img src="@item.Image" alt="img">
+                                </div>
+                                <div class="destination-content">
+                                    <h3><a href="destination-details.html">@item.Name</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- about Section Start -->
+
+<section class="about-section section-padding section-bg fix">
+    <div class="container">
+        @foreach (var item in Model.AboutTravils)
+        {
+            <div class="about-wrappper-2">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="about-image">
+                            <img src="@item.Image" alt="img" class="wow img-custom-anim-left" />
+                            <div class="cricle-shape float-bob-y">
+                                <img src="@item.SmallImage" alt="img" />
+                            </div>
+                            <div class="counter-box float-bob-y">
+                                <div class="content">
+                                    <h2><span class="count">345</span>+</h2>
+                                    <p>LOCATIONS WORLD WIDE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-title">
+                                <span class="wow fadeInUp">@item.Title</span>
+                                <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                                    @item.Subtitle
+                                </h2>
+                            </div>
+                            <p class="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
+                                @item.Desc
+                            </p>
+                            <div class="about-area">
+                                <div class="about-items wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="icon">
+                                        @* iconlar burda qalır *@
+                                    </div>
+                                    <div class="content">
+                                        <h4>
+                                            24/7 Support for Hassle-Free Trips
+                                        </h4>
+                                        <p>
+                                            @item.SubDesc
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="about-items wow fadeInUp" data-wow-delay=".5s">
+                                    <div class="icon">
+                                        @* iconlar burda qalır *@
+                                    </div>
+                                    <div class="content">
+                                        <h4>
+                                            Exclusive Deals on Top Destinations
+                                        </h4>
+                                        <p>
+                                            Our attraction pass save you more than buying individual <br /> tickets for your tour package system.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a asp-action="Index" asp-controller="Contact" class="theme-btn wow fadeInUp" data-wow-delay=".3s">
+                                <span>More About Travil</span> <i class="far fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+<!-- Brand Section Start -->
+<div class="brand-section fix section-padding sect-bg pt-0">
+    <div class="container">
+        <p class="brand-text wow fadeInUp">
+            Join Hands with Our Trusted Partners to Discover Exclusive Travel Experiences, Unmatched Comfort, and Seamless Journeys Worldwide
+        </p>
+        <div class="swiper brand-slider">
+            <div class="swiper-wrapper">
+
+                @foreach (var item in Model.Brands)
+                {
+                    <div class="swiper-slide">
+                        <div class="brand-img text-center">
+                            <img src="@item.Image" alt="img">
+                        </div>
+                    </div>
+                }
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- AboutTeamMember Section Start -->
+
+<section class="team-section fix section-padding section-bg">
+    <div class="plane-shape float-bob-y">
+        <img src="assets/img/team/plane-shape.png" alt="img">
+    </div>
+    <div class="plane-shape-2 float-bob-y">
+        <img src="assets/img/team/plane-2.png" alt="img">
+    </div>
+    <div class="frame-shape float-bob-x">
+        <img src="assets/img/team/frame.png" alt="img">
+    </div>
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="wow fadeInUp">Our Team</span>
+            <h2 class="wow fadeInUp" data-wow-delay=".3s">Tours Guiding Team</h2>
+            <p class="mt-3 wow fadeInUp" data-wow-delay=".5s">
+                Our attraction passes save you more than buying individual tickets for your tour package <br /> system. Our attraction passes save you more than for your travelling.
+            </p>
+        </div>
+        <div class="row">
+            @foreach (var member in Model.AboutTeamMembers)
+            {
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="team-box-items">
+                        <div class="thumb">
+                            <img src="@member.Image" alt="@member.FullName" />
+                        </div>
+                        <div class="content">
+                            <p>@member.Position</p>
+                            <h3><a asp-controller="TeamDetail" asp-action="Index" asp-route-id="@member.Id">@member.FullName</a></h3>
+                            <div class="social-icon">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="team-button text-center mt-5 wow fadeInUp" data-wow-delay=".3s">
+            <a asp-action="Index" asp-controller="Team" class="theme-btn">
+                <span>View All Member</span> <i class="far fa-long-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Cta App Section Start -->
+
+<section class="cta-app-section fix section-padding section-bg pt-0">
+    <div class="container">
+        @foreach(var app in Model.AboutApps)
+        {
+            <div class="cta-app-wrapper bg-cover" style="background-image: url('@app.BackgroundImage');">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="cta-app-content">
+                            <div class="section-title mb-0">
+                                <span class="text-white wow fadeInUp">@app.Title</span>
+                                <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">@app.Desc</h2>
+                                <p class="mt-4 text-white wow fadeInUp" data-wow-delay=".5s">
+                                    @app.Text
+                                </p>
+                            </div>
+                            <h6 class="app-text wow fadeInUp" data-wow-delay=".3s">Your all-in-one travel app</h6>
+                            <div class="apps-items wow fadeInUp" data-wow-delay=".5s">
+                                <a href="contact.html">
+                                    <img src="@app.AppleImage" alt="Apple Store" />
+                                </a>
+                                <a href="contact.html">
+                                    <img src="@app.PlayStoreImage" alt="Play Store" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6"></div>
+                </div>
+                <div class="app-image wow img-custom-anim-right">
+                    <img src="@app.Image" alt="Mobile App" />
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+
+<!--  news-section Start -->
+
+<section class="news-section section-padding pt-0">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="wow fadeInUp">Latest Blog & News</span>
+            <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                Latest Travel Insights and <br> Destination Guides
+            </h2>
+        </div>
+        <div class="row">
+            @foreach (var item in Model.AboutBlogs)
+            {
+                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="news-card-items">
+                        <div class="news-image">
+                            <img src="@item.Image" alt="img">
+                            <ul class="post">
+                                <li>
+                                    <i class="far fa-calendar"></i>
+                                    @item.CreatedDate.ToString("dd MMMM, yyyy")
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="news-content">
+                            <h3>
+                                <a asp-controller="AboutDetail" asp-action="Index" asp-route-id="@item.Id">
+                                    @item.Name
+                                </a>
+                            </h3>
+                            <p>
+                                @(item.Desc.Length > 40 ? item.Desc.Substring(0, 40) + "..." : item.Desc)
+                            </p>
+
+                            <a asp-controller="AboutDetail" asp-action="Index" asp-route-id="@item.Id" class="theme-btn">
+                                <span>Read More</span> <i class="far fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,153 @@
+﻿@model FinalProjectConsume.Models.Tour.TourCreate
+
+@{
+    ViewData["Title"] = "Create Tour";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>Create Tour</h2>
+
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Duration"></label>
+            <input asp-for="Duration" class="form-control" />
+            <span asp-validation-for="Duration" class="text-danger"></span>
+        </div>
+        @if (ViewBag.Countries != null)
+        {
+            foreach (SelectListItem item in ViewBag.Countries)
+            {
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           name="CountryIds" value="@item.Value" id="country_@item.Value" />
+                    <label class="form-check-label" for="country_@item.Value">@item.Text</label>
+                </div>
+            }
+        }
+        else
+        {
+            <p class="text-danger">Country məlumatları yüklənmədi.</p>
+        }
+
+
+
+        <div class="form-group">
+            <label asp-for="Price"></label>
+            <input asp-for="Price" type="number" step="0.01" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="OldPrice"></label>
+            <input asp-for="OldPrice" type="number" step="0.01" class="form-control" />
+            <span asp-validation-for="OldPrice" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Capacity"></label>
+            <input asp-for="Capacity" type="number" class="form-control" />
+            <span asp-validation-for="Capacity" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Select Cities</label>
+            @{
+                var cities = ViewBag.Cities as List<SelectListItem>;
+            }
+            @if (cities != null && cities.Any())
+            {
+                foreach (var item in cities)
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox"
+                               name="CityIds" value="@item.Value" id="city_@item.Value" />
+                        <label class="form-check-label" for="city_@item.Value">@item.Text</label>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-danger">City məlumatları yüklənmədi.</p>
+            }
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ImageFile"></label>
+            <input asp-for="ImageFile" type="file" class="form-control" />
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Desc"></label>
+            <textarea asp-for="Desc" class="form-control"></textarea>
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Select Activities</label>
+            @{
+                var activities = ViewBag.Activities as List<SelectListItem>;
+            }
+            @if (activities != null && activities.Any())
+            {
+                foreach (var item in activities)
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ActivityIds" value="@item.Value" id="activity_@item.Value" />
+                        <label class="form-check-label" for="activity_@item.Value">@item.Text</label>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-danger">Activity məlumatları yüklənmədi.</p>
+            }
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="StartDate"></label>
+            <input asp-for="StartDate" type="date" class="form-control" />
+            <span asp-validation-for="StartDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="EndDate"></label>
+            <input asp-for="EndDate" type="date" class="form-control" />
+            <span asp-validation-for="EndDate" class="text-danger"></span>
+        </div>
+
+
+    
+      @*   <div class="form-group">
+            <label>Select Experiences</label>
+            @foreach (var item in ViewBag.Experiences as List<SelectListItem>)
+            {
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           name="ExperienceIds" value="@item.Value" id="experience_@item.Value" />
+                    <label class="form-check-label" for="experience_@item.Value">@item.Text</label>
+                </div>
+            }
+        </div>
+
+ *@
+        <div class="form-group">
+            <label>Select Amenities</label>
+            @foreach (var item in ViewBag.Amenities as List<SelectListItem>)
+            {
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"
+                           name="AmenityIds" value="@item.Value" id="amenity_@item.Value" />
+                    <label class="form-check-label" for="amenity_@item.Value">@item.Text</label>
+                </div>
+            }
+        </div>
+
+        <button type="submit" class="btn btn-success mt-3">Create</button>
+    </form>
+</div>

@@ -1,0 +1,686 @@
+﻿@model FinalProjectConsume.ViewModels.UI.TourDetailVM
+@using System.Globalization
+@using Microsoft.AspNetCore.Identity
+
+<!-- Search Section Start -->
+<div class="header-search-bar d-flex align-items-center">
+    <button class="search-close">×</button>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="search-bar">
+                    <div class="contact-form-box contact-search-form-box">
+                        <form action="#">
+                            <input type="email" placeholder="Search here...">
+                            <button type="submit"><i class="far fa-search"></i></button>
+                        </form>
+                        <p>Type above and press Enter to search. Press Close to cancel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Breadcrumb Section Start -->
+<div class="breadcrumb-wrapper section-padding  bg-cover" style="background-image: url('/assets/img/tour/@Model.Settings.FirstOrDefault(x =>x.Key == "TourBanner")?.Value">
+
+    <div class="container-fluid">
+        <div class="page-heading">
+            <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <i class="far fa-slash"></i>
+                </li>
+                <li>
+                    Listing Details
+                </li>
+            </ul>
+            <h1 class="wow fadeInUp" data-wow-delay=".5s">Listing Details</h1>
+        </div>
+    </div>
+    <div class="plane-shape float-bob-x">
+        <img src="~/assets/img/@Model.Settings.FirstOrDefault(x =>x.Key == "TourBannerFly")?.Value">
+    </div>
+</div>
+
+<!--  Tour Details Section Start -->
+<section class="tour-details-section section-padding">
+    <div class="container">
+        <div class="tour-details-wrapper">
+            <div class="row g-5">
+                <div class="col-xl-8 col-lg-7">
+                    <div class="tour-details-items">
+                        <div class="details-thumb">
+                            <img src="@Model.Tour.ImageUrl" alt="img">
+                        </div>
+                        <div class="details-content">
+                            <span class="location-icon">
+                                <i class="far fa-map-marker-alt"></i>
+                               @Model.Tour.Name
+                            </span>
+                            <h2>
+                                @string.Join(", ", Model.Tour.CityNames)
+                            </h2>
+
+                            <span><i class="fal fa-calendar-alt"></i> @Model.Tour.StartDate</span>
+                            <span><i class="fal fa-calendar-alt"></i> @Model.Tour.EndDate</span>
+
+                            <h4>
+                               Guest Count: @Model.Tour.Capacity
+                            </h4>
+                            <p>
+                                @Model.Tour.Desc
+                            </p>
+                          
+
+                     <div class="destination-list-item">
+                        <h4>Experience the Difference</h4>
+
+                        @if (Model.Experiences != null && Model.Experiences.Any())
+                        {
+                            <div class="destination-list">
+                                <ul class="list">
+                                    @foreach (var exp in Model.Experiences)
+                                    {
+                                        <li>
+                                            <i class="flaticon-check"></i>
+                                            @exp.Name
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                        else
+                        {
+                            <p>No experiences available.</p>
+                        }
+                    </div>
+
+                            <div class="tour-details-icon">
+                                <div class="row g-5 justity-content-end">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="icon">
+                                            <i class="flaticon-connection"></i>
+                                            <h5>Use Free Wi-Fi</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="icon">
+                                            <i class="flaticon-cyber-security"></i>
+                                            <h5>Special Security</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="icon">
+                                            <i class="flaticon-guide"></i>
+                                            <h5>Special Guiding</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="icon">
+                                            <i class="flaticon-gym"></i>
+                                            <h5>Gym Center</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="icon">
+                                            <i class="flaticon-cycling"></i>
+                                            <h5>Special Security</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="icon">
+                                            <i class="flaticon-hiking"></i>
+                                            <h5>Special Security</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="icon">
+                                            <i class="flaticon-googles"></i>
+                                            <h5>Swimming & Fishing</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="icon">
+                                            <i class="flaticon-solar-system"></i>
+                                            <h5>Solar Energy Syster</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-items">
+                                <h4>Tour Plan</h4>
+                                <div class="faq-accordion">
+                                    <div class="accordion" id="accordion2">
+                                        @if (Model.Tour.Plans != null && Model.Tour.Plans.Any())
+                                        {
+                                            int index = 0;
+                                            foreach (var plan in Model.Tour.Plans.OrderBy(p => p.Day))
+                                            {
+                                                var collapseId = $"faq{index + 1}";
+                                                var showClass = index == 0 ? "show" : "";
+                                                var collapsedClass = index == 0 ? "" : "collapsed";
+
+                                                <div class="accordion-item mb-3">
+                                                    <h5 class="accordion-header">
+                                                        <button class="accordion-button @collapsedClass" type="button"
+                                                                data-bs-toggle="collapse"
+                                                                data-bs-target="#@collapseId"
+                                                                aria-expanded="@(index == 0 ? "true" : "false")"
+                                                                aria-controls="@collapseId">
+                                                            <span>Day @plan.Day:</span> @plan.Title
+                                                        </button>
+                                                    </h5>
+                                                    <div id="@collapseId" class="accordion-collapse collapse @showClass" data-bs-parent="#accordion2">
+                                                        <div class="accordion-body">
+                                                            @plan.Description
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                index++;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <div>No tour plans available.</div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="map-area">
+                                <h3>
+                                    View in Map
+                                </h3>
+                                <div class="google-map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12157.714958905637!2d49.83549152315648!3d40.37718943337763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d079efb5163%3A0xc20aa51a5f0b5e01!2sCode%20Academy!5e0!3m2!1sen!2saz!4v1750445825748!5m2!1sen!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                            <div class="review-area">
+                                <h3>Customer Reviews</h3>
+                                <div class="courses-reviews-box-items">
+                                    <div class="courses-reviews-box">
+                                        <div class="reviews-box">
+                                            <h2>
+                                                <span class="odometer" data-count="@Model.AverageStar">@Model.AverageStar</span>
+                                            </h2>
+                                            <div class="star">
+                                                @{
+                                                    int fullStars = (int)Math.Floor(Model.AverageStar);
+                                                    int emptyStars = 5 - fullStars;
+
+                                                    for (int i = 0; i < fullStars; i++)
+                                                    {
+                                                        <i class="fas fa-star"></i>
+                                                    }
+
+                                                    for (int i = 0; i < emptyStars; i++)
+                                                    {
+                                                        <i class="far fa-star"></i>
+                                                    }
+                                                }
+                                            </div>
+                                            <p>@Model.ReviewCount Reviews</p>
+                                        </div>
+                                        <div class="reviews-ratting-right">
+                                            <div class="reviews-ratting-item">
+                                              @*   <div class="star">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div> *@
+                                                <div class="progress">
+                                                    <div class="progress-value style-two" style="width:@(Model.AverageStar * 20)%"></div>
+                                                </div>
+                                                <span>Feedback</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="client-review-items">
+                                <h3>Clients Reviews for @Model.Tour.Name</h3>
+
+                                <div class="clinet-box-items">
+                                    @if (Model.Reviews != null && Model.Reviews.Any())
+                                    {
+                                        foreach (var review in Model.Reviews)
+                                        {
+                                            <div class="clinet-box">
+                                                <div class="star">
+                                                    @for (int i = 0; i < review.Star; i++)
+                                                    {
+                                                        <i class="fas fa-star"></i>
+                                                    }
+                                                    @for (int i = review.Star; i < 5; i++)
+                                                    {
+                                                        <i class="far fa-star"></i>
+                                                    }
+                                                </div>
+                                                <h5>
+                                                    @review.Message
+                                                </h5>
+                                                <div class="review-wrap-area d-flex gap-4 align-items-center">
+                                                    <div class="review-thumb">
+                                                    </div>
+                                                    <div class="review-content">
+                                                        <div class="head-area d-flex flex-wrap gap-2 align-items-center justify-content-between">
+                                                            <div class="cont">
+                                                                <h5>@review.Name</h5>
+                                                                <!-- Əlavə məlumat varsa buraya -->
+                                                            </div>
+                                                         @* <h6><a href="#" class="reply-link">Reply</a></h6> *@
+                                                        </div>
+
+                                                            <div class="reply-box" style="display:none; margin-top:10px;">
+                                                                <textarea class="form-control" rows="3" placeholder="Write your reply..."></textarea>
+                                                                <button class="btn btn-primary btn-sm mt-2 submit-reply-btn">Submit</button>
+                                                            </div>
+
+                                                        
+                                                            <div class="review-content" data-review-id="@review.TourId">
+                                                            </div>
+
+                                                   <script>
+                                                        document.addEventListener('DOMContentLoaded', function() {
+                                                            var replyLinks = document.querySelectorAll('.reply-link');
+
+                                                            replyLinks.forEach(function(link) {
+                                                                link.addEventListener('click', function(e) {
+                                                                    e.preventDefault();
+
+                                                                    var container = link.closest('.review-content');
+                                                                    var replyBox = container.querySelector('.reply-box');
+
+                                                                    replyBox.style.display = (replyBox.style.display === 'block') ? 'none' : 'block';
+                                                                });
+                                                            });
+                                                            var submitButtons = document.querySelectorAll('.submit-reply-btn');
+
+                                                            submitButtons.forEach(function(button) {
+                                                                button.addEventListener('click', async function(e) {
+                                                                    e.preventDefault();
+
+                                                                    var replyBox = e.target.closest('.reply-box');
+                                                                    var textarea = replyBox.querySelector('textarea');
+                                                                    var replyText = textarea.value.trim();
+
+                                                                    if (!replyText) {
+                                                                        alert('Please write a reply before submitting.');
+                                                                        return;
+                                                                    }
+
+                                                                    var reviewContent = replyBox.closest('.review-content');
+                                                                    var reviewId = reviewContent.getAttribute('data-review-id');
+
+                                                                    try {
+                                                                        let response = await fetch('/api/review/reply', {
+                                                                            method: 'POST',
+                                                                            headers: {
+                                                                                'Content-Type': 'application/json'
+                                                                            },
+                                                                            body: JSON.stringify({
+                                                                                ReviewId: reviewId,
+                                                                                Message: replyText,
+                                                                            })
+                                                                        });
+
+                                                                        if (response.ok) {
+                                                                            textarea.value = '';
+                                                                            replyBox.style.display = 'none';
+
+                                                                            var newReply = document.createElement('div');
+                                                                            newReply.classList.add('reply-item');
+                                                                            newReply.innerHTML = `<p>${replyText}</p>`;
+
+                                                                            var repliesContainer = reviewContent.querySelector('.replies-container');
+                                                                            if (!repliesContainer) {
+                                                                                repliesContainer = document.createElement('div');
+                                                                                repliesContainer.classList.add('replies-container');
+                                                                                reviewContent.appendChild(repliesContainer);
+                                                                            }
+                                                                            repliesContainer.appendChild(newReply);
+                                                                        } else {
+                                                                            alert('Failed to submit reply. Try again later.');
+                                                                        }
+                                                                    } catch (error) {
+                                                                        alert('Error occurred while submitting reply.');
+                                                                        console.error(error);
+                                                                    }
+                                                                });
+                                                            });
+                                                        });
+                                                        </script>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <p>No reviews yet.</p>
+                                    }
+                                </div>
+                            </div>
+                            <div class="review-comment-items">
+                                <h3>Add Your Reviews</h3>
+                                <ul class="mb-0">
+                                    <li>
+                                        FeedBack
+                                        <div class="star" id="starWrapper">
+                                            <i class="far fa-star" data-value="1"></i>
+                                            <i class="far fa-star" data-value="2"></i>
+                                            <i class="far fa-star" data-value="3"></i>
+                                            <i class="far fa-star" data-value="4"></i>
+                                            <i class="far fa-star" data-value="5"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <h4>Leave Feedback</h4>
+                                <form asp-controller="Review" asp-action="SubmitReview" method="post" id="contact-form">
+                                    <!-- Burada TourId gizli olaraq göndərilir -->
+                                    <input type="hidden" name="TourId" value="@Model.Tour.Id" />
+
+                                    <div class="row g-4">
+                                        <div class="col-lg-6">
+                                            <div class="form-clt">
+                                                <input type="text" name="Name" id="name" placeholder="Your name" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-clt">
+                                                <input type="text" name="Phone" id="phone" placeholder="Your phone" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-clt">
+                                                <input type="email" name="Email" id="email21" placeholder="Your email" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-clt">
+                                                <textarea name="Message" id="message" placeholder="Your comments..." required></textarea>
+                                            </div>
+                                        </div>
+
+                                        <input type="hidden" name="Star" id="starInput" value="0" />
+                                        @{
+                                            var isAuthenticated = User.Identity.IsAuthenticated;
+                                        }
+
+                                        <div class="col-lg-6">
+                                          <button type="submit" class="theme-btn text-center" id="submitReviewBtn" data-auth="@isAuthenticated.ToString().ToLower()">
+                                            <span>Submit Reviews</span> <i class="far fa-long-arrow-right"></i>
+                                        </button>
+
+                                            <script>
+                                                document.addEventListener("DOMContentLoaded", function () {
+                                                    const submitBtn = document.getElementById("submitReviewBtn");
+                                                    const isAuth = submitBtn.dataset.auth === "true";
+
+                                                    if (!isAuth) {
+                                                        submitBtn.addEventListener("click", function (e) {
+                                                            e.preventDefault();
+                                                            window.location.href = "/Account/Login";
+                                                        });
+                                                    }
+                                                });
+                                            </script>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <style>
+                                .far.fa-star {
+                                    font-size: 24px;
+                                    cursor: pointer;
+                                    color: #ccc;
+                                }
+
+                                    .far.fa-star.selected {
+                                        color: gold;
+                                    }
+                            </style>
+
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    const stars = document.querySelectorAll('#starWrapper i');
+                                    const starInput = document.getElementById('starInput');
+
+                                    stars.forEach(star => {
+                                        star.addEventListener('click', () => {
+                                            const selectedValue = parseInt(star.getAttribute('data-value'));
+                                            starInput.value = selectedValue;
+
+                                            stars.forEach(s => {
+                                                const val = parseInt(s.getAttribute('data-value'));
+                                                if (val <= selectedValue) {
+                                                    s.classList.add('selected');
+                                                    s.classList.remove('far');
+                                                    s.classList.add('fas');
+                                                } else {
+                                                    s.classList.remove('selected');
+                                                    s.classList.remove('fas');
+                                                    s.classList.add('far');
+                                                }
+                                            });
+                                        });
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="tour-details-sidebar sticky-style">
+                        <div class="tour-sidebar-items" data-capacity="@Model.Tour.Capacity">
+
+                            <h3>Tour Booking</h3>
+                            <ul class="form-list">
+                                <li>
+                                    From Date:
+                                    <div class="form-clt">
+                                        @{
+                                            var parsedDate = DateTime.ParseExact(Model.Tour.StartDate, "MM.dd.yyyy", CultureInfo.InvariantCulture);
+                                        }
+                                        <input type="text" value="@parsedDate.ToString("dd-MM-yyyy")" readonly />
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="tickets-list">
+                                <p>Tickets</p>
+                                <ul>
+                                    <li>
+                                        18+ Years:
+                                        <div class="form-clt">
+                                            <div class="form">
+                                                <input type="number" min="1" value="1" class="form-control quantity" id="adultCount" name="AdultsCount" />
+                                            </div>
+                                        </div>
+                                        Total:$<span id="adultTotal">@(Model.Tour.Price)</span>
+                                    </li>
+                                    <li>
+                                        18‑ Years:
+                                        <div class="form-clt">
+                                            <div class="form">
+                                                <input type="number" min="1" value="1" class="form-control quantity" id="childCount" name="ChildrenCount" />
+                                            </div>
+                                        </div>
+                                        Total:$<span id="childTotal">@((Model.Tour.Price - 50))</span>
+                                    </li>
+                                    <li>
+                                        Email:
+                                        <div class="form-clt">
+                                            <div class="form">
+                                                <input type="email" name="UserEmail" id="userEmail" class="form-control" required placeholder="Enter your email" />
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', () => {
+                                        const adultPrice = parseFloat('@(Model.Tour.Price)');
+                                        const childPrice = adultPrice - 50;
+
+                                        const adultCountEl = document.getElementById('adultCount');
+                                        const childCountEl = document.getElementById('childCount');
+                                        const adultTotalEl = document.getElementById('adultTotal');
+                                        const childTotalEl = document.getElementById('childTotal');
+                                        const grandTotalEl = document.getElementById('grandTotal');
+
+                                        function updateTotals() {
+                                            const adults = parseInt(adultCountEl.value) || 0;
+                                            const children = parseInt(childCountEl.value) || 0;
+
+                                            const adultTotal = adults * adultPrice;
+                                            const childTotal = children * childPrice;
+                                            const grandTotal = adultTotal + childTotal;
+
+                                            adultTotalEl.textContent = adultTotal.toFixed(2);
+                                            childTotalEl.textContent = childTotal.toFixed(2);
+                                            grandTotalEl.textContent = grandTotal.toFixed(2);
+                                        }
+
+                                        adultCountEl.addEventListener('input', updateTotals);
+                                        childCountEl.addEventListener('input', updateTotals);
+
+                                        updateTotals();
+                                    });
+                                </script>
+                            </div>
+
+                            <ul class="total-list">
+                                <li>
+                                    Grand Total: $<span id="grandTotal">@((Model.Tour.Price) + (Model.Tour.Price - 50))</span>
+                                </li>
+                            </ul>
+                            <form action="/booking/create" method="POST" id="paymentForm">
+                                <input type="hidden" name="TourId" value="@Model.Tour.Id" />
+                                <input type="hidden" name="Price" value="@Model.Tour.Price" />
+                                <input type="hidden" name="AdultsCount" id="AdultsCountInput" value="1" />
+                                <input type="hidden" name="ChildrenCount" id="ChildrenCountInput" value="1" />
+                                <input type="hidden" name="UserEmail" id="HiddenUserEmail" value="" />
+
+
+                                @{
+                                    var Authenticated = User.Identity.IsAuthenticated;
+                                }
+
+                                <a href="javascript:void(0);" class="theme-btn" id="bookNowBtn" data-auth="@Authenticated.ToString().ToLower()">
+                                    <span>Book Now</span> <i class="far fa-long-arrow-right"></i>
+                                </a>
+                            </form>
+
+
+
+                    <script>    
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const adultInput = document.getElementById('adultCount');
+                            const childInput = document.getElementById('childCount');
+                            const userEmailInput = document.getElementById('userEmail');
+
+                            const hiddenAdult = document.getElementById('AdultsCountInput');
+                            const hiddenChild = document.getElementById('ChildrenCountInput');
+                            const hiddenEmail = document.getElementById('HiddenUserEmail');
+
+                            const adultPrice = parseFloat('@(Model.Tour.Price)');
+                            const childPrice = adultPrice - 50;
+
+                            const adultTotalEl = document.getElementById('adultTotal');
+                            const childTotalEl = document.getElementById('childTotal');
+                            const grandTotalEl = document.getElementById('grandTotal');
+
+                            function updateTotals() {
+                                const adults = parseInt(adultInput.value) || 0;
+                                const children = parseInt(childInput.value) || 0;
+
+                                const adultTotal = adults * adultPrice;
+                                const childTotal = children * childPrice;
+                                const grandTotal = adultTotal + childTotal;
+
+                                adultTotalEl.textContent = adultTotal.toFixed(2);
+                                childTotalEl.textContent = childTotal.toFixed(2);
+                                grandTotalEl.textContent = grandTotal.toFixed(2);
+                            }
+
+                            function syncInputs() {
+                                if (adultInput) hiddenAdult.value = adultInput.value;
+                                if (childInput) hiddenChild.value = childInput.value;
+                                if (userEmailInput && hiddenEmail) hiddenEmail.value = userEmailInput.value;
+                            }
+
+                            const bookNowBtn = document.getElementById('bookNowBtn');
+                                    bookNowBtn.addEventListener('click', function () {
+                                        const isAuth = bookNowBtn.dataset.auth === "true";
+
+                                        if (!isAuth) {
+                                            window.location.href = "/Account/Login";
+                                            return;
+                                        }
+                                        const email = userEmailInput.value.trim();
+                                        if (email === "") {
+                                            alert("Email not empty!");
+                                            userEmailInput.focus();
+                                            return;
+                                        }
+
+
+                                        const container = document.querySelector('.tour-sidebar-items');
+                                        const capacity = parseInt(container.dataset.capacity) || 0;
+
+                                        const adults = parseInt(adultInput.value) || 0;
+                                        const children = parseInt(childInput.value) || 0;
+                                        const totalPeople = adults + children;
+
+                                        if (totalPeople > capacity) {
+                                            alert(`The number of bookings cannot exceed the available capacity! Maximum: ${capacity}`);
+                                            return; 
+                                        }
+
+                                        syncInputs();
+                                        document.getElementById('paymentForm').submit();
+                                    });
+
+                            adultInput.addEventListener('input', () => {
+                                updateTotals();
+                                syncInputs();
+                            });
+                            childInput.addEventListener('input', () => {
+                                updateTotals();
+                                syncInputs();
+                            });
+                            userEmailInput.addEventListener('input', syncInputs);
+
+                            updateTotals();
+                            syncInputs();
+                        });
+                    </script>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+

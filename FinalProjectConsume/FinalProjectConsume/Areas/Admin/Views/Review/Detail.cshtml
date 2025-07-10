@@ -1,0 +1,59 @@
+﻿@model FinalProjectConsume.ViewModels.ReviewListVM
+
+@{
+    ViewData["Title"] = "Review Detail";
+}
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            Review by @Model.Name
+        </div>
+        <div class="card-body">
+            <p><strong>Email:</strong> @Model.Email</p>
+            <p><strong>Phone:</strong> @Model.Phone</p>
+            <p><strong>Message:</strong> @Model.Message</p>
+            <p><strong>Star:</strong> @Model.Star</p>
+            <p><strong>Created At:</strong> @Model.CreatedAt.ToString("yyyy-MM-dd HH:mm")</p>
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+</div>
+
+
+    <div class="card mt-4">
+        <div class="card-header">
+            Admin Reply
+        </div>
+        <div class="card-body">
+            <form asp-action="Reply" method="post">
+                <input type="hidden" name="Email" value="@Model.Email" />
+                <input type="hidden" name="Name" value="@Model.Name" />
+                <input type="hidden" name="Id" value="@Model.Id" />
+
+                <div class="form-group">
+                    <label for="ReplyMessage">Your Message:</label>
+                    <textarea name="ReplyMessage" class="form-control" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-success mt-2">Send Reply</button>
+            </form>
+
+        </div>
+    </div>
+
+
+</div>

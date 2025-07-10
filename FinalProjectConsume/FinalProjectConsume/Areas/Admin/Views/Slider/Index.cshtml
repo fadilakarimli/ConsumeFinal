@@ -1,0 +1,104 @@
+﻿@model IEnumerable<Slider>
+
+<head>
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <div class="col-sm-12 col-xl-6">
+        <a asp-controller="Slider" asp-action="Create" class="btn btn-success">Create</a>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr id="slider-row-@item.Id">
+                        <td>
+                            <img src="@item.Img" style="width:150px; height:120px;" />
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger btn-delete" data-id="@item.Id">Delete</button>
+                            <a class="btn btn-warning" asp-controller="Slider" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <a class="btn btn-info" asp-controller="Slider" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const deleteButtons = document.querySelectorAll(".btn-delete");
+
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success me-2",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+        });
+
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const id = this.getAttribute("data-id");
+
+                swalWithBootstrapButtons.fire({
+                    title: "Are you sure you want to delete?",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Yes, delete it!",
+                    cancelButtonText: "No, cancel!",
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        fetch(`/Admin/Slider/Delete/${id}`, {
+                            method: "POST"
+                        })
+                        .then(response => {
+                            if (response.ok) {
+                                document.getElementById(`slider-row-${id}`).remove();
+
+                                swalWithBootstrapButtons.fire({
+                                    title: "Deleted!",
+                                    text: "Slider was successfully deleted.",
+                                    icon: "success"
+                                });
+                            } else {
+                                swalWithBootstrapButtons.fire({
+                                    title: "Error!",
+                                    text: "Failed to delete slider.",
+                                    icon: "error"
+                                });
+                            }
+                        })
+                        .catch(() => {
+                            swalWithBootstrapButtons.fire({
+                                title: "Error!",
+                                text: "An error occurred while deleting.",
+                                icon: "error"
+                            });
+                        });
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                        swalWithBootstrapButtons.fire({
+                            title: "Cancelled",
+                            text: "Your slider is safe :)",
+                            icon: "info"
+                        });
+                    }
+                });
+            });
+        });
+    });
+</script>

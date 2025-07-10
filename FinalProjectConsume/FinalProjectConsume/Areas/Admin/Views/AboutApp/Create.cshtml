@@ -1,0 +1,55 @@
+﻿@model FinalProjectConsume.Models.AboutApp.AboutAppCreate
+
+@{
+    ViewData["Title"] = "Create About App";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>Create About App</h2>
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label asp-for="Image"></label>
+            <input asp-for="Image" type="file" class="form-control" />
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Desc"></label>
+            <textarea asp-for="Desc" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Text"></label>
+            <textarea asp-for="Text" class="form-control" rows="5"></textarea>
+            <span asp-validation-for="Text" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="AppleImage"></label>
+            <input asp-for="AppleImage" type="file" class="form-control" />
+            <span asp-validation-for="AppleImage" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PlayStoreImage"></label>
+            <input asp-for="PlayStoreImage" type="file" class="form-control" />
+            <span asp-validation-for="PlayStoreImage" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BackgroundImage"></label>
+            <input asp-for="BackgroundImage" type="file" class="form-control" />
+            <span asp-validation-for="BackgroundImage" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success mt-3">Create</button>
+    </form>
+</div>

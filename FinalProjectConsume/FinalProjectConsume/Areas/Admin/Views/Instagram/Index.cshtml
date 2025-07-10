@@ -1,0 +1,114 @@
+﻿@model IEnumerable<Instagram>
+
+<head>
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <div class="col-sm-12 col-xl-6">
+        <a asp-controller="Instagram" asp-action="Create" class="btn btn-success">Create</a>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        Operations
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr id="instagram-row-@item.Id">
+                        <td>
+                            <img src="@item.Image" style="width:150px; height:120px" />
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger btn-delete" data-id="@item.Id">Delete</button>
+
+                            <a class="btn btn-warning" asp-controller="Instagram" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <a class="btn btn-info" asp-controller="Instagram" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const deleteButtons = document.querySelectorAll(".btn-delete");
+
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success me-2",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+        });
+
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const id = this.getAttribute("data-id");
+
+                swalWithBootstrapButtons.fire({
+                    title: "Are you sure delete await?",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Yes, delete it!",
+                    cancelButtonText: "No, can not be delete it",
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        fetch(`/Admin/Instagram/Delete/${id}`, {
+                            method: "POST"
+                        })
+                        .then(response => {
+                            if (response.ok) {
+                                document.getElementById(`instagram-row-${id}`).remove();
+
+                                swalWithBootstrapButtons.fire({
+                                    title: "Delete success!",
+                                    text: "Instagram item successfully deleted",
+                                    icon: "success"
+                                });
+                            } else {
+                                swalWithBootstrapButtons.fire({
+                                    title: "Error!",
+                                    text: "Error occurred while deleting",
+                                    icon: "error"
+                                });
+                            }
+                        })
+                        .catch(error => {
+                            console.error("Error:", error);
+                            swalWithBootstrapButtons.fire({
+                                title: "Error!",
+                                text: "Unexpected error occurred",
+                                icon: "error"
+                            });
+                        });
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                        swalWithBootstrapButtons.fire({
+                            title: "Cancel",
+                            text: "Instagram item is safe :)",
+                            icon: "error"
+                        });
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+
+

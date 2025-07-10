@@ -1,0 +1,129 @@
+﻿@model FinalProjectConsume.ViewModels.UI.TeamDetailVM
+
+<!-- Search Section Start -->
+<div class="header-search-bar d-flex align-items-center">
+    <button class="search-close">×</button>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="search-bar">
+                    <div class="contact-form-box contact-search-form-box">
+                        <form action="#">
+                            <input type="email" placeholder="Search here...">
+                            <button type="submit"><i class="far fa-search"></i></button>
+                        </form>
+                        <p>Type above and press Enter to search. Press Close to cancel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Breadcrumb Section Start -->
+<div class="breadcrumb-wrapper section-padding  bg-cover" style="background-image: url('/assets/img/tour/@Model.Settings.FirstOrDefault(x =>x.Key == "TourBanner")?.Value">
+    <div class="container-fluid">
+        <div class="page-heading">
+            <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <i class="far fa-slash"></i>
+                </li>
+                <li>
+                    Tour Guide Details
+                </li>
+            </ul>
+            <h1 class="wow fadeInUp" data-wow-delay=".5s">Tour Guide Details</h1>
+        </div>
+    </div>
+    <div class="plane-shape float-bob-x">
+        <img src="~/assets/img/@Model.Settings.FirstOrDefault(x =>x.Key == "TourBannerFly")?.Value">
+
+    </div>
+</div>
+
+<!-- Team Section Start -->
+<section class="team-details-section fix section-padding">
+    <div class="container">
+        <div class="team-details-wrapper">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5">
+                    <div class="team-details-image">
+                        <img src=@Model.AboutTeamMember.Image alt="team-img">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="team-details-content">
+                        <div class="details-info">
+                            <h3>@Model.AboutTeamMember.FullName</h3>
+                            <span>@Model.AboutTeamMember.Position</span>
+                        </div>
+                        <p class="mt-3">
+                            @Model.AboutTeamMember.About
+                        </p>
+                       @*  <div class="progress-area mt-4">
+                            <div class="progress-wrap">
+                                <div class="pro-items">
+                                    <div class="pro-head">
+                                        <h6 class="title">
+                                            tour package
+                                        </h6>
+                                        <span class="point">
+                                            90%
+                                        </span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar"
+                                             data-wow-duration=".9s" role="progressbar"
+                                             style="width: 90%;" aria-valuenow="95" aria-valuemin="0"
+                                             aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="pro-items">
+                                    <div class="pro-head">
+                                        <h6 class="title">
+                                            Travel
+                                        </h6>
+                                        <span class="point">
+                                            95%
+                                        </span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar"
+                                             data-wow-duration=".9s" role="progressbar"
+                                             style="width: 85%;" aria-valuenow="95" aria-valuemin="0"
+                                             aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> *@
+                        <div class="social-icon">
+                            <span>Social Media:</span>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          @*   <div class="team-single-history pt-5">
+                <div class="title">
+                    <h3>Education Background</h3>
+                </div>
+                <h5 class="pt-5">Diploma in Web Design <span>2012 - 2014</span></h5>
+                <p class="mt-3">
+                    Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's in the ou standard dummy text ever since the 1500s, when an unknown printer took.Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's in the abouti standard dummy
+                </p>
+                <h5 class="pt-5">Degree in UI/UX Design <span>2015 - 2016 </span></h5>
+                <p class="mt-3">
+                    Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's in the ou standard dummy text ever since the 1500s, when an unknown printer took.Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's in the abouti standard dummy
+                </p>
+            </div> *@
+        </div>
+    </div>
+</section>

@@ -1,0 +1,208 @@
+﻿@using static FinalProjectConsume.ViewComponents.BasketViewComponent
+@model BasketVM
+<style>
+    .quantity-control {
+        max-width: 120px;
+    }
+    .quantity-control .form-control {
+        max-width: 50px;
+    }
+</style>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Your Shopping Cart</h2>
+
+    @if (Model != null && Model.BasketProducts != null && Model.BasketProducts.Any())
+    {
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Image</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.BasketProducts)
+                {
+                    <tr data-product-id="@item.ProductId">
+                        <td>
+                            <img src="@item.ProductImage" alt="@item.ProductName" width="70" height="70" />
+                        </td>
+                        <td>@item.ProductName</td>
+                        <td>$@item.Price.ToString("0.00")</td>
+                        <td>
+                            <div class="input-group quantity-control">
+                                <button class="btn btn-outline-secondary decrease-btn" data-id="@item.ProductId">-</button>
+                                <input type="text" class="form-control text-center quantity-input" value="@item.Quantity" readonly data-product-id="@item.ProductId" />
+                                <button class="btn btn-outline-secondary increase-btn" data-id="@item.ProductId">+</button>
+                            </div>
+                        </td>
+                        <td class="product-total">$@(item.Quantity * item.Price)</td>
+                        <td>
+                            <button class="btn btn-danger delete-btn" data-id="@item.ProductId">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="text-right">
+            <h4>Total Price: <span id="totalPrice">$@Model.TotalPrice.ToString("0.00")</span></h4>
+            <a href="javascript:void(0)" id="checkoutBtn" class="btn btn-success mt-3">Proceed to Checkout</a>
+
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">Your basket is empty.</div>
+    }
+</div>
+@section Scripts {
+        <script>
+            // Miqdarı artır
+        // Miqdarı artır
+        $(document).on('click', '.increase-btn', function () {
+            const productId = $(this).data('id');
+
+            fetch('/Basket/IncreaseQuantity', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ productId: productId })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        let input = $(`input[data-product-id='${productId}']`);
+                        let quantity = parseInt(input.val()) + 1;
+                        input.val(quantity);
+
+                        updateProductTotal(productId);
+                        updateTotalPrice();
+                    } else {
+                        alert(data.message);
+                    }
+                });
+        });
+
+        // Miqdarı azaldır
+        $(document).on('click', '.decrease-btn', function () {
+            const productId = $(this).data('id');
+
+            fetch('/Basket/DecreaseQuantity', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ productId: productId })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        let input = $(`input[data-product-id='${productId}']`);
+                        let quantity = parseInt(input.val());
+                        if (quantity > 1) {
+                            input.val(quantity - 1);
+                            updateProductTotal(productId);
+                            updateTotalPrice();
+                        } else {
+                            $(`tr[data-product-id='${productId}']`).remove();
+                            updateTotalPrice();
+                        }
+                    } else {
+                        alert(data.message);
+                    }
+                });
+        });
+
+            // Məhsulu səbətdən sil
+            $(document).on('click', '.delete-btn', function () {
+                const productId = $(this).data('id');
+
+                fetch('/Basket/DeleteProductFromBasket', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: `productId=${productId}`
+                })
+                    .then(res => {
+                        if (res.ok) return res.json();
+                        return res.text().then(msg => { throw new Error(msg); });
+                    })
+                    .then(data => {
+                        $(`tr[data-product-id='${productId}']`).remove();
+                        updateTotalPrice();
+                    })
+                    .catch(err => {
+                        alert("Error: " + err.message);
+                    });
+            });
+
+            // Hər məhsulun cəmini yenilə
+            function updateProductTotal(productId) {
+                let input = $(`input[data-product-id='${productId}']`);
+                let quantity = parseInt(input.val());
+                let priceText = $(`tr[data-product-id='${productId}'] td:nth-child(3)`).text().replace('$', '');
+                let price = parseFloat(priceText);
+
+                let total = (quantity * price).toFixed(2);
+                $(`tr[data-product-id='${productId}'] .product-total`).text(`$${total}`);
+            }
+
+            // Ümumi qiyməti yenilə
+            function updateTotalPrice() {
+                let total = 0;
+                $('.product-total').each(function () {
+                    let price = parseFloat($(this).text().replace('$', ''));
+                    total += price;
+                });
+                $('#totalPrice').text(`$${total.toFixed(2)}`);
+            }
+
+        // Basket səhifəsinin script bölməsinə əlavə et:
+
+        $(document).on('click', '#checkoutBtn', function () {
+            // BasketVM strukturunu JS-də JSON kimi qurmalısan
+            let basket = {
+                BasketProducts: []
+            };
+
+            $('tr[data-product-id]').each(function () {
+                let productId = $(this).data('product-id');
+                let productName = $(this).find('td:nth-child(2)').text();
+                let price = parseFloat($(this).find('td:nth-child(3)').text().replace('$', ''));
+                let quantity = parseInt($(this).find('input.quantity-input').val());
+
+                basket.BasketProducts.push({
+                    ProductId: productId,
+                    ProductName: productName,
+                    Price: price,
+                    Quantity: quantity
+                });
+            });
+
+            fetch('/payment/create-checkout-session-basket', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(basket)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.url) {
+                        window.location.href = data.url; // Stripe checkout səhifəsinə yönləndir
+                    } else {
+                        alert("Ödəniş sessiyası yaradılmadı.");
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                    alert("Xəta baş verdi.");
+                });
+        });
+
+        </script>
+}

@@ -1,0 +1,44 @@
+﻿@model FinalProjectConsume.Models.SpecialOffer.SpecialOfferCreate
+
+@{
+    ViewData["Title"] = "Create Special Offer";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>@ViewData["Title"]</h2>
+
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="TitleSmall"></label>
+            <input asp-for="TitleSmall" class="form-control" />
+            <span asp-validation-for="TitleSmall" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="TitleMain"></label>
+            <input asp-for="TitleMain" class="form-control" />
+            <span asp-validation-for="TitleMain" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BackgroundImage">Background Image</label>
+            <input asp-for="BackgroundImage" class="form-control" type="file" />
+            <span asp-validation-for="BackgroundImage" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="DiscountImage">Discount Image</label>
+            <input asp-for="DiscountImage" class="form-control" type="file" />
+            <span asp-validation-for="DiscountImage" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BagImage">Bag Image</label>
+            <input asp-for="BagImage" class="form-control" type="file" />
+            <span asp-validation-for="BagImage" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success">Create</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

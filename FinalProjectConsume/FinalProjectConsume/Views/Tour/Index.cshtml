@@ -1,0 +1,445 @@
+﻿@using System.Globalization
+@model TourPageVM
+<!-- Search Section Start -->
+<div class="header-search-bar d-flex align-items-center">
+    <button class="search-close">×</button>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="search-bar">
+                    <div class="contact-form-box contact-search-form-box">
+                        <form action="#">
+                            <input type="email" placeholder="Search here...">
+                            <button type="submit"><i class="far fa-search"></i></button>
+                        </form>
+                        <p>Type above and press Enter to search. Press Close to cancel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Breadcrumb Section Start -->
+
+<div class="breadcrumb-wrapper section-padding  bg-cover" style="background-image: url('/assets/img/tour/@Model.Settings.FirstOrDefault(x =>x.Key == "TourBanner")?.Value">
+    <div class="container-fluid">
+        <div class="page-heading">
+            <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".3s">
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <i class="far fa-slash"></i>
+                </li>
+                <li>
+                    Listing Sidebar
+                </li>
+            </ul>
+            <h1 class="wow fadeInUp" data-wow-delay=".5s">Listing Sidebar</h1>
+        </div>
+    </div>
+    <div class="plane-shape float-bob-x">
+        <img src="~/assets/img/@Model.Settings.FirstOrDefault(x =>x.Key == "TourBannerFly")?.Value">
+    </div>
+</div>
+
+<!-- Amazing Tour Section Start -->
+<section class="amazing-tour-section section-padding">
+    <div class="container">
+        <div class="amazing-tour-wrapper">
+            <div class="row g-4">
+                    <div class="col-xl-3 col-lg-4">
+                        <div class="tour-sidebar-area sticky-style">
+                            <div class="tour-destination-sidebar">
+                                <form id="filterForm" method="post">
+                                <div class="booking-list-area">
+                                    <!-- Destination -->
+                                    <div class="booking-list">
+                                        <div class="icon">
+                                            <img src="~/assets/img/hero/location.png" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>Destination</h5>
+                                            <div class="form-clt">
+                                                <div class="form">
+                                                    <select class="single-select w-100" name="cityId">
+                                                        <option disabled selected>Your city</option>
+                                                        @foreach (var city in Model.Cities)
+                                                        {
+                                                            if (city.Id == Model.SelectedCityId)
+                                                            {
+                                                                <option value="@city.Id" selected>@city.Name</option>
+                                                            }
+                                                            else
+                                                            {
+                                                                <option value="@city.Id">@city.Name</option>
+                                                            }
+                                                        }
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Activity -->
+                                    <div class="booking-list">
+                                        <div class="icon">
+                                            <img src="~/assets/img/hero/location.png" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>All Activity</h5>
+                                            <div class="form-clt">
+                                                <div class="form">
+                                                    <select class="single-select w-100" name="activityId">
+                                                        <option disabled selected>Choose Activity</option>
+                                                        @if (Model.Activities != null && Model.Activities.Any())
+                                                        {
+                                                            @foreach (var activity in Model.Activities)
+                                                            {
+                                                                <option value="@activity.Id" selected="@(activity.Id == Model.SelectedActivityId ? "selected" : null)">@activity.Name</option>
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            <option disabled>No activities found</option>
+                                                        }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Departure Date -->
+                                    <div class="booking-list">
+                                        <div class="icon">
+                                            <img src="~/assets/img/hero/location.png" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>Departure Date</h5>
+                                            <div class="form-clt">
+                                                <div id="datepicker" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="departureDate" type="text" placeholder="Date From" readonly value="@Model.SelectedDepartureDate">
+
+                                                    <span class="input-group-addon"><i class="far fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            document.addEventListener("DOMContentLoaded", function () {
+                                                var today = new Date();
+
+                                                $('#datepicker').datepicker({
+                                                    format: 'dd-mm-yyyy',
+                                                    startDate: today,
+                                                    autoclose: true,
+                                                    todayHighlight: true
+                                                });
+                                            });
+                                        </script>
+
+                                    </div>
+
+                                    <!-- Guests -->
+                                    <div class="booking-list style-2">
+                                        <div class="icon">
+                                            <img src="~/assets/img/hero/location.png" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>Guest</h5>
+                                            <div class="form-clt">
+                                                <div class="form">
+                                                    <input type="number" name="guestCount" class="form-control" placeholder="Number of Guests" min="1" value="@(Model.SelectedGuestCount ?? 1)">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Price Filter -->
+                                    <div class="tour-sidebar-widget">
+                                        <div class="wid-title">
+                                            <h3>Filter by Price</h3>
+                                        </div>
+                                        <div class="price-range-wrapper">
+                                            <div class="slider-container">
+                                                <input type="range" name="minPrice" id="min-slider" class="slider" min="50" max="5000" value="50">
+                                                <input type="range" name="maxPrice" id="max-slider" class="slider" min="50" max="5000" value="5000">
+                                            </div>
+                                            <div class="price-text pt-4 d-flex gap-3">
+                                                <label for="amount">Price:</label>
+                                                <input type="text" id="amount" readonly style="border:0;">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Amenities -->
+                                    <div class="tour-sidebar-widget">
+                                        <div class="wid-title">
+                                            <h3>Amenities</h3>
+                                        </div>
+                                        <div class="checkbox-items">
+                                            @if (Model.Amenities != null && Model.Amenities.Any())
+                                            {
+                                                foreach (var amenity in Model.Amenities)
+                                                {
+                                                    <label class="checkbox-single">
+                                                        <span class="d-flex gap-xl-3 gap-2 align-items-center">
+                                                            <span class="checkbox-area d-center">
+                                                                <input type="checkbox" name="amenities" value="@amenity.Id" />
+                                                                <span class="checkmark d-center"></span>
+                                                            </span>
+                                                            <span class="text-color">@amenity.Name</span>
+                                                        </span>
+                                                    </label>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <p>No amenities found.</p>
+                                            }
+                                        </div>
+                                    </div>
+
+                                    <!-- Search Button -->
+                                    <div class="search-widget">
+                                        <button type="submit" class="theme-btn">
+                                            <span>Search</span><i class="fal fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                </form>
+
+                         @*    <div id="filteredToursContainer">
+                                <!-- Filter nəticələri JS ilə bura yazılacaq -->
+                            </div> *@
+
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col-xl-9 col-lg-8">
+                    <div class="row justify-content-center" id="toursRowContainer">
+                        @{
+                            foreach (var tour in Model.Tours)
+                            {
+                                DateTime parsedDate;
+                                bool isExpired = DateTime.TryParseExact(tour.StartDate, "MM.dd.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out parsedDate)
+                                && parsedDate < DateTime.Today;
+                            }
+                        }
+
+                        @foreach (var tour in Model.Tours)
+                        {
+                            DateTime parsedDate;
+                            bool isExpired = DateTime.TryParseExact(tour.StartDate, "MM.dd.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out parsedDate)
+                            && parsedDate < DateTime.Today;
+
+                            <div class="col-4 wow fadeInUp position-relative" data-wow-delay=".2s">
+                                <div class="tour-box-items">
+                                    <div class="thumb position-relative">
+                                        <img src="@tour.ImageUrl" alt="Tour image" />
+                                        @if (isExpired)
+                                        {
+                                            <div class="expired-badge">Expired</div>
+                                        }
+                                    </div>
+                                    <div class="content">
+                                        <span>@(tour.CityNames != null && tour.CityNames.Count > 0 ? tour.CityNames[0] : "Şəhər yoxdur")</span>
+                                        <h4>
+                                            @if (isExpired)
+                                            {
+                                                <span style="color: gray; cursor: not-allowed; text-decoration: line-through;" title="This tour is expired">
+                                                    @tour.Name
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <a asp-controller="TourDetail" asp-action="Index" asp-route-id="@tour.Id">@tour.Name</a>
+                                            }
+                                        </h4>
+                                        <h6>
+                                            From <span>$@tour.Price</span>
+                                            @if (tour.OldPrice.HasValue)
+                                            {
+                                                <del>$@tour.OldPrice</del>
+                                            }
+                                        </h6>
+                                        <ul class="list">
+                                            <li>
+                                                <i class="far fa-calendar"></i>
+                                                @tour.Duration
+                                            </li>
+                                            <li>
+                                                <i class="far fa-flag"></i>
+                                                @tour.CountryCount Countries
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <style>
+                        .expired-badge {
+                            position: absolute;
+                            top: 15px;
+                            left: 15px;
+                            background-color: rgba(128, 128, 128, 0.8);
+                            color: white;
+                            padding: 5px 10px;
+                            font-size: 12px;
+                            border-radius: 4px;
+                            z-index: 2;
+                            font-weight: bold;
+                        }
+                    </style>
+
+
+
+
+                    <div class="page-nav-wrap mt-5 text-center wow fadeInUp" data-wow-delay=".3s">
+                        <ul>
+                            @if (Model.CurrentPage > 1)
+                            {
+                                <li>
+                                    <a class="page-numbers" href="@Url.Action("Index", new { page = Model.CurrentPage - 1, search = Model.SearchTerm })">« Back</a>
+                                </li>
+                            }
+
+                            @for (int i = 1; i <= Model.TotalPages; i++)
+                            {
+                                <li>
+                                    <a class="page-numbers @(i == Model.CurrentPage ? "active" : "")"
+                                       href="@Url.Action("Index", new { page = i, search = Model.SearchTerm })">@i</a>
+                                </li>
+                            }
+
+                            @if (Model.CurrentPage < Model.TotalPages)
+                            {
+                                <li>
+                                    <a class="page-numbers" href="@Url.Action("Index", new { page = Model.CurrentPage + 1, search = Model.SearchTerm })">Next »</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("filterForm");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const getSelectedOptionValue = (selector) => {
+                const el = document.querySelector(selector);
+                if (el && el.value) {
+                    return [el.value]; // Burda ID-ləri (value) göndəririk
+                }
+                return [];
+            };
+
+            const getCheckedValues = (name) => {
+                return Array.from(document.querySelectorAll(`input[name='${name}']:checked`)).map(x => x.value);
+            };
+
+            // const rawDate = document.querySelector("input[name='departureDate']").value;
+            // let parsedDate = null;
+
+            // if (rawDate) {
+            //     const [day, month, year] = rawDate.split("-");
+            //     parsedDate = new Date(`${year}-${month}-${day}`).toISOString();
+            // }
+
+            const rawDate = document.querySelector("input[name='departureDate']").value;
+            let parsedDate = null;
+
+            if (rawDate) {
+                parsedDate = rawDate + "T00:00:00"; // yyyy-MM-ddT00:00:00 formatında
+            }
+
+
+
+            const filterDto = {
+                cityIds: getSelectedOptionValue("select[name='cityId']").map(Number),
+                activityIds: getSelectedOptionValue("select[name='activityId']").map(Number),
+                departureDate: parsedDate,
+                guestCount: parseInt(document.querySelector("input[name='guestCount']").value) || null,
+                minPrice: parseFloat(document.querySelector("input[name='minPrice']").value) || null,
+                maxPrice: parseFloat(document.querySelector("input[name='maxPrice']").value) || null,
+                amenityIds: getCheckedValues("amenities").map(Number)
+            };
+
+
+
+
+            const response = await fetch("/Tour/Filter", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(filterDto),
+            });
+
+            const container = document.getElementById("toursRowContainer");
+            container.innerHTML = "";
+
+
+            if (response.ok) {
+                const tours = await response.json();
+
+                if (tours.length === 0) {
+                    container.innerHTML = "<p>No tours found.</p>";
+                    return;
+                }
+
+                tours.forEach(tour => {
+                    const tourCard = `
+            <div class="col-4 wow fadeInUp" data-wow-delay=".2s">
+                <div class="tour-box-items">
+                    <div class="thumb">
+                        <img src="${tour.imageUrl}" alt="Tour image" />
+                    </div>
+                    <div class="content">
+                        <span>${tour.cityNames}</span>
+                        <h4>
+                               <a href="/TourDetail/Index/${tour.id}">${tour.name}</a>
+                        </h4>
+                        <h6>
+                            From <span>$${tour.price}</span>
+                            ${tour.oldPrice ? `<del>$${tour.oldPrice}</del>` : ""}
+                        </h6>
+                        <ul class="list">
+                            <li>
+                                <i class="far fa-calendar"></i>
+                                ${tour.duration}
+                            </li>
+                            <li>
+                                <i class="far fa-flag"></i>
+                                ${tour.countryCount} Countries
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        `;
+                    container.innerHTML += tourCard;
+                });
+
+            } else {
+                container.innerHTML = "<p style='color:red;'>Filter failed.</p>";
+            }
+        });
+    });
+</script>

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<FinalProjectConsume.Models.Tour.Tour>
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+
+<table class="table">
+    <thead>
+        <tr>
+            @* <th>CityName</th> *@
+            <th>Duration</th>
+            <th>Price</th>
+            <th>Capacity</th>
+            <th>City</th>
+            <th>Activity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tour in Model)
+        {
+            <tr>
+                <td>@tour.Duration</td>
+                <td>@tour.Price</td>
+                <td>@tour.Capacity</td>
+                <td>@string.Join(", ", tour.CityNames ?? new List<string>())</td>
+                <td>@string.Join(", ", tour.ActivityNames ?? new List<string>())</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+</div>

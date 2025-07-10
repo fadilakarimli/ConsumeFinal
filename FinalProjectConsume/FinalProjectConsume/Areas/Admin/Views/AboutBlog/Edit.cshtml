@@ -1,0 +1,31 @@
+﻿@model FinalProjectConsume.Models.AboutBlog.AboutBlogEdit
+
+@{
+    ViewData["Title"] = "Edit About Blog";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>Edit About Blog</h2>
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Desc"></label>
+            <textarea asp-for="Desc" class="form-control" rows="4"></textarea>
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Image">Select New Image</label>
+            <input asp-for="Image" type="file" class="form-control" />
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+    </form>
+</div>

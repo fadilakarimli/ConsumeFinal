@@ -1,0 +1,26 @@
+﻿@model FinalProjectConsume.Models.City.CityEdit
+
+@{
+    ViewData["Title"] = "City Edit";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>@ViewData["Title"]</h2>
+
+    <form asp-action="Edit" method="post">
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CountryId"></label>
+            <select asp-for="CountryId" class="form-control" asp-items="ViewBag.Countries"></select>
+            <span asp-validation-for="CountryId" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

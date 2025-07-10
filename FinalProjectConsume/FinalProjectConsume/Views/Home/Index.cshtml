@@ -1,0 +1,828 @@
+﻿@model HomePageVM   
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Search Section Start -->
+<div class="header-search-bar d-flex align-items-center">
+    <button class="search-close">×</button>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="search-bar">
+                    <div class="contact-form-box contact-search-form-box">
+                        <form action="#">
+                            <input type="email" placeholder="Search here...">
+                            <button type="submit"><i class="far fa-search"></i></button>
+                        </form>
+                        <p>Type above and press Enter to search. Press Close to cancel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero Section Start -->
+<!-- Slider Section Start --><!-- Slider Section Start -->
+<section class="hero-section hero-4">
+    <div class="array-button">
+        <button class="array-prev"><i class="far fa-long-arrow-left"></i></button>
+        <button class="array-next"><i class="far fa-long-arrow-right"></i></button>
+    </div>
+    <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+
+            @foreach (var item in Model.Sliders)
+            {
+                <div class="swiper-slide">
+                    <div class="hero-items">
+                        <div class="plane-shape">
+                            <img src="@item.Img" alt="shape">
+                        </div>
+                        <div class="hero-bg bg-cover" style="background-image: url('@item.Img');"></div>
+                        <div class="container">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="hero-content">
+                                        @* <h6 data-animation="fadeInUp" data-delay="1.3s">Tour & Travel Agency</h6> *@
+                                     @*    <h1 data-animation="fadeInUp" data-delay="1.5s">
+                                            <span class="shape-text">Explore</span><span>The</span> <br> Global Worlds
+                                        </h1>
+                                        <p data-animation="fadeInUp" data-delay="1.7s">
+                                            Velit integer eu tincidunt scelerisque. Sodales volutpat neque fermentum malesuada.
+                                        </p> *@
+
+                                        @* Burada SliderInfo məlumatlarını göstəririk *@
+                                        @if (Model.SliderInfos != null && Model.SliderInfos.Any())
+                                        {
+                                            var sliderInfo = Model.SliderInfos.First(); // Çünki tək məlumat var adətən
+                                            <div class="slider-info" data-animation="fadeInUp" data-delay="1.9s" style="margin-top:20px; color:white;">
+                                                <h2>@sliderInfo.Title</h2>
+                                                <p>@sliderInfo.Description</p>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+    <form method="get" action="/Tour/Index">
+    <div class="container">
+        <div class="booking-list-area-1">
+            <div class="booking-list">
+                <div class="icon">
+                    <img src="assets/img/hero/location.png" alt="img">
+                </div>
+                <div class="content">
+                    <h5>All Cities</h5>
+                    <div class="form-clt">
+                        <div class="form">
+                                <select class="single-select w-100" name="cityId">
+                                    <option disabled selected>Your city</option>
+                                    @foreach (var city in Model.Cities)
+                                    {
+                                        <option value="@city.Id">@city.Name</option>
+                                    }
+                                </select>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="booking-list">
+                <div class="icon">
+                    <img src="assets/img/hero/location.png" alt="img">
+                </div>
+                <div class="content">
+                    <h5>All Activity</h5>
+                    <div class="form-clt">
+                        <div class="form">
+                                <select class="single-select w-100" name="activityId">
+                                    <option>Choose Activity</option>
+                                    @foreach (var item in Model.Activities)
+                                    {
+                                        <option value="@item.Id">@item.Name</option>
+                                    }
+                                </select>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="booking-list">
+                <div class="icon">
+                    <img src="assets/img/hero/location.png" alt="img">
+                </div>
+                    <div class="content">
+                        <h5>Departure Date</h5>
+                        <div class="form-clt">
+                            <input class="form-control" type="date" id="departureDate" name="departureDate" min="" />
+                        </div>
+                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const today = new Date();
+                            const year = today.getFullYear();
+                            const month = String(today.getMonth() + 1).padStart(2, '0');
+                            const day = String(today.getDate()).padStart(2, '0');
+                            const minDate = `${year}-${month}-${day}`;
+
+                            document.getElementById("departureDate").setAttribute("min", minDate);
+                        });
+                    </script>
+
+            </div>
+            <div class="booking-list">
+                <div class="icon">
+                    <img src="assets/img/hero/location.png" alt="img">
+                </div>
+                <div class="content">
+                    <h5>Guest</h5>
+                    <div class="form-clt">
+                        <div class="form">
+                                <input type="number" class="form-control" name="guestCount" placeholder="Number of Guests" min="1" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="theme-btn">
+                <span>Search <i class="far fa-search"></i></span>
+            </button>
+        </div>
+    </div>
+    </form>
+</section>
+
+
+<!-- Trending Section Start -->
+<section class="trending-destinations section-padding fix">
+    <div class="container">
+        <div class="section-title-area lg-center">
+            <div class="section-title">
+                <span class="wow fadeInUp">Trending Destinations</span>
+                <h2 class="wow fadeInUp" data-wow-delay=".3s">Trendy Travel Locations</h2>
+            </div>
+            <a asp-controller="Destination" asp-action="Index" class="theme-btn theme-btn-2 wow fadeInUp" data-wow-delay=".5s">
+                <span>Explore More</span> <i class="far fa-long-arrow-right"></i>
+            </a>
+        </div>
+        <div class="row">
+            @foreach (var item in Model.TrandingDestinations)
+            {
+                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="trending-destinations-card-items">
+                        <div class="destinations-img">
+                            <img src="@item.Image" alt="img">
+                            <div class="icon">
+                                <a asp-controller="DestinationDetail" asp-action="Index" asp-route-id="@item.Id">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                            <ul class="destinations-content">
+                                <li class="title">
+                                    <a asp-controller="DestinationDetail" asp-action="Index" asp-route-id="@item.Id">@item.Title</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- About Section Start -->
+
+<section class="about-section section-padding sect-bg">
+    <div class="shape-1">
+        <img src="assets/img/about/dot-shape.png" alt="img" />
+    </div>
+    <div class="container">
+        <div class="about-wrapper">
+            <div class="row g-4 align-items-center">
+
+                @foreach (var item in Model.AboutAgencies)
+                {
+                    <div class="col-lg-5">
+                        <div class="about-image wow img-custom-anim-left">
+                            <img src=@item.Image alt="img">
+                            <div class="about-box float-bob-y">
+                                <h2><span class="odometer" data-count="29">00</span>+</h2>
+                                <p>YEARS OF EXPERIENCE</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="about-content">
+                            <div class="section-title">
+                                <span class="wow fadeInUp">About Travil Agency</span>
+                                <h2 class="wow fadeInUp" data-wow-delay=".3s">@item.Title</h2>
+                            </div>
+                            <p class="wow fadeInUp mt-4 mt-md-0" data-wow-delay=".5s">
+                                @item.Desc
+                            </p>
+                            <div class="about-sideber wow fadeInUp" data-wow-delay=".3s">
+                                <h5>“@item.Subtitle”</h5>
+                            </div>
+                            <div class="about-btn">
+                                <a asp-controller="About" asp-action="Index" class="theme-btn wow fadeInUp" data-wow-delay=".3s">
+                                    <span>More About Travil</span> <i class="far fa-long-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Brand Section Start -->
+<div class="brand-section fix section-padding sect-bg pt-0">
+    <div class="container">
+        <p class="brand-text wow fadeInUp">
+            Join Hands with Our Trusted Partners to Discover Exclusive Travel Experiences, Unmatched Comfort, and Seamless Journeys Worldwide
+        </p>
+        <div class="swiper brand-slider">
+            <div class="swiper-wrapper">
+           
+                @foreach (var item in Model.Brands)
+                {
+                    <div class="swiper-slide">
+                        <div class="brand-img text-center">
+                            <img src="@item.Image" alt="img">
+                        </div>
+                    </div>
+                }
+               
+               
+               
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Tour Section Start -->
+
+<section class="tour-section fix section-padding">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="wow fadeInUp">Featured Places</span>
+            <h2 class="wow fadeInUp" data-wow-delay=".3s">Amazing Tour Places</h2>
+            <p class="mt-3 mt-mb-0 wow fadeInUp" data-wow-delay=".5s">
+                Our attraction passes save you more than buying individual tickets for your tour <br> package system. Our attraction passes save you more than.
+            </p>
+        </div>
+        <div class="row" id="tour-container">
+            @{
+                var initialTours = Model.Tours.Take(4).ToList();
+            }
+            @foreach (var tour in initialTours)
+            {
+                DateTime parsedDate;
+                bool isExpired = DateTime.TryParseExact(tour.StartDate, "MM.dd.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out parsedDate)
+                 && parsedDate < DateTime.Today;
+
+                <div class="col-xl-3 col-lg-6 col-md-6 tour-item position-relative">
+                    <div class="tour-box-items">
+                        <div class="thumb position-relative">
+                            <img src="@tour.ImageUrl" alt="Tour image" />
+                            @if (isExpired)
+                            {
+                                <div class="expired-badge">Expired</div>
+                            }
+                        </div>
+                        <div class="content">
+                            <span>@(tour.CityNames != null && tour.CityNames.Count > 0 ? tour.CityNames[0] : "Şəhər yoxdur")</span>
+
+                            <h4>
+                                @if (isExpired)
+                                {
+                                    <span style="color: gray; cursor: not-allowed; text-decoration: line-through;" title="This tour is expired">
+                                        @tour.Name
+                                    </span>
+                                }
+                                else
+                                {
+                                    <a asp-controller="TourDetail" asp-action="Index" asp-route-id="@tour.Id">@tour.Name</a>
+                                }
+                            </h4>
+
+                            <h6>
+                                From <span>$@tour.Price</span>
+                                @if (tour.OldPrice.HasValue)
+                                {
+                                    <del>$@tour.OldPrice</del>
+                                }
+                            </h6>
+                            <h6>Capacity: @tour.Capacity</h6>
+                            <ul class="list">
+                                <li><i class="far fa-calendar"></i> @tour.Duration</li>
+                                <li><i class="far fa-flag"></i> @tour.CountryCount Countries</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <style>
+                .expired-badge {
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    background-color: rgba(128, 128, 128, 0.8);
+                    color: white;
+                    padding: 5px 10px;
+                    font-size: 12px;
+                    border-radius: 4px;
+                    z-index: 2;
+                    font-weight: bold;
+                }
+            </style>
+
+
+        </div>
+        <div class="text-center mt-4">
+            <button id="show-more-btn" class="btn btn-primary">Show More</button>
+        </div>
+    </div>
+</section>
+<!-- Tour-descover-section Start -->
+<section class="tour-descover-section section-padding fix bg-cover" style="background-image: url(assets/img/tour/bg2.jpg);">
+    <div class="container">
+        <div class="tour-discover-wrapper">
+            <div class="row g-4">
+                <div class="col-xl-5">
+                    <div class="tour-content lg-center">
+                        <div class="section-title">
+                            <span class="wow fadeInUp">Discover Weekly Travelling</span>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">Hot deals on <br> select expedition departures</h2>
+                            <p class="mt-3 mt-mb-0 wow fadeInUp" data-wow-delay=".5s">
+                                Curated destinations and tours that capture the true <br> essence of location, ensuring you experience. Our <br> attraction pass save you more.
+                            </p>
+                        </div>
+                        <div class="tour-button mt-3">
+                            <a asp-action="Index" asp-controller="Tour" class="theme-btn wow fadeInUp" data-wow-delay=".5s">
+                                <span>Explore More</span> <i class="far fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="swiper tour-slider">
+                        <div class="swiper-wrapper">
+                            @foreach (var tour in Model.Tours)
+                            {
+                                <div class="swiper-slide">
+                                    <div class="tour-card-item">
+                                        <div class="tour-image">
+                                            <img src="@tour.ImageUrl" alt="@tour.Name" />
+                                        </div>
+                                        <div class="tour-content">
+                                            <h6>
+                                                From <span>$@tour.Price</span>
+                                                @if (tour.OldPrice.HasValue)
+                                                {
+                                                    <del>$@tour.OldPrice</del>
+                                                }
+                                            </h6>
+                                            <h4>
+                                                <a>@tour.Name</a>
+                                            </h4>
+                                            <ul>
+                                                <li>
+                                                    <i class="far fa-map-marker-alt"></i>
+                                                    @string.Join(", ", tour.CityNames)
+                                                </li>
+                                            </ul>
+                                            <div class="list">
+                                                <ul>
+                                                    <li>
+                                                        <i class="far fa-calendar"></i>
+                                                        @tour.Duration
+                                                    </li>
+                                                </ul>
+                                              @*   <div class="star">
+                                                    <!-- Burada star rating varsa dinamik göstərmək olar, yoxdursa hardcoded qalsın -->
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="fas fa-star"></i></a>
+                                                    <a href="#"><i class="far fa-star"></i></a>
+                                                    <span>(30)</span>
+                                                </div> *@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="swiper-dot4 mt-5">
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--  Marquee Section Start -->
+<div class="marquee-section fix section-padding pt-0">
+    <div class="marque-wrapper style-2">
+        <div class="swiper text-slider">
+            <div class="swiper-wrapper slide-transtion">
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Mobile-Friendly Platform</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Eco-Friendly Travel Options</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Group Booking Discounts</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Real-Time Itinerary Updates</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Expert Travel Advisors</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Affordable Travel Deals</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Affordable Travel Deals</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="marque-wrapper style-3">
+        <div dir="rtl" class="swiper text-slider-2">
+            <div class="swiper-wrapper slide-transtion">
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Secure Online Booking</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Verified Customer Reviews</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>24/7 Customer Support</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Exclusive Travel Packages</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Special Member Discounts</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Local Destination Insights</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide brand-slide-element">
+                    <div class="marque-text">
+                        <img src="assets/img/marque.png" alt="img">
+                        <h3>Affordable Travel Deals</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  Team Section Start -->
+<!--  Team Section Start -->
+<section class="team-section-4 section-padding pt-0">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="wow fadeInUp">Our Team</span>
+            <h2 class="wow fadeInUp" data-wow-delay=".3s">Tours Guiding Team</h2>
+            <p class="mt-3 mt-mb-0 wow fadeInUp" data-wow-delay=".5s">
+                Our attraction passes save you more than buying individual tickets for your tour <br> package system. Our attraction passes save you more than.
+            </p>
+        </div>
+        <div class="row">
+            @foreach (var member in Model.TeamMembers)
+            {
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="team-card-items-4">
+                        <div class="thumb">
+                            <img src="@member.Image" alt="img">
+                        </div>
+                        <div class="content">
+                            <span>@member.Position</span>
+                            <h3><a href="#">@member.FullName</a></h3>
+                            <div class="social-icon">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-basketball-ball"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!--  Top Destination Section Start -->
+<section class="top-destination-section-4 section-padding pb-0">
+    <div class="container">
+        <div class="section-title-area">
+            <div class="section-title">
+                <span class="wow fadeInUp">Our Top Destination</span>
+                <h2 class="wow fadeInUp" data-wow-delay=".3s">Inspiration for Future Travel</h2>
+                <p class="mt-3 mt-mb-0 wow fadeInUp" data-wow-delay=".3s">
+                    Our attraction passes save you more than buying individual tickets for <br> your tour package system our attraction passes.
+                </p>
+            </div>
+            <a asp-controller="Destination" asp-action="Index"class="theme-btn theme-btn-2 wow fadeInUp" data-wow-delay=".5s">
+                <span>Explore More</span> <i class="far fa-long-arrow-right"></i>
+            </a>
+        </div>
+        <div class="row">
+            @if (Model.DestinationFeatures != null && Model.DestinationFeatures.Any())
+            {
+                int delayCounter = 2;
+
+                foreach (var feature in Model.DestinationFeatures)
+                {
+                    var delay = $".{delayCounter}s";  // delay üçün 0.2s, 0.4s kimi
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="@delay">
+                        <div class="destination-feature-box">
+                            <div class="icon">
+                                <img src="@feature.IconImage" alt="icon">
+                            </div>
+                            <div class="content">
+                                <h6>@feature.Title</h6>
+                                <span><b>@feature.TourCount</b> Tours - From <b>$@feature.PriceFrom</b></span>
+                            </div>
+                        </div>
+                    </div>
+                    delayCounter += 2; // növbəti delay üçün artırırıq (0.2s addım)
+                }
+            }
+            else
+            {
+                <p>No destination features available.</p>
+            }
+        </div>
+        @if (Model.SpecialOffers != null && Model.SpecialOffers.Any())
+        {
+            foreach (var item in Model.SpecialOffers)
+            {
+                <div class="cta-wrapper-4 section-padding bg-cover" style="background-image: url('@item.BackgroundImageUrl')">
+                    <div class="section-title text-center mb-0">
+                        <span class="wow fadeInUp">@item.TitleSmall</span>
+                        <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">@Html.Raw(item.TitleMain)
+                        </h2>
+                    </div>
+
+                    <div class="discount-shape float-bob-y">
+                        <img src="@item.DiscountImageUrl" alt="discount image">
+                    </div>
+                    <div class="bag-shape float-bob-x">
+                        <img src="@item.BagImageUrl" alt="bag image">
+                    </div>
+                    <div class="plane-shape">
+                        <img src="assets/img/cta/olane-shape.png" alt="plane shape">
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="cta-wrapper-4 section-padding bg-cover" style="background-image: url('assets/img/cta/cta-bg-3.jpg');">
+                <div class="section-title text-center mb-0">
+                    <span class="wow fadeInUp">Special Offer</span>
+                    <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">No offers available at the moment.</h2>
+                </div>
+            </div>
+        }
+
+    </div>
+</section>
+
+
+<!--Testimonial Section Start -->
+<section class="testimonial-section-4 section-padding">
+    <div class="container">
+        <div class="section-title-area">
+            <div class="section-title">
+                <span class="wow fadeInUp">Our Testimonial</span>
+                <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                    Real Feedback from Our Happy <br> Travelers Worldwide
+                </h2>
+            </div>
+            <p class="wow fadeInUp" data-wow-delay=".5">Our attraction passes save you more than buying<br> individual tickets for your tour package system. Our<br> attraction passes save you.</p>
+        </div>
+        <div class="swiper testimonial-slider-4">
+            <div class="swiper-wrapper">
+                @foreach (var review in Model.Reviews.Where(r => r.Star == 5))
+                {
+                    <div class="swiper-slide">
+                        <div class="testimonial-box-items-4">
+                            <div class="testi-img">
+                            </div>
+                            <div class="star">
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    <i class="fas fa-star"></i>
+                                }
+                            </div>
+                            <div class="icon">
+                                <img src="assets/img/testimonial/quote-01.png" alt="quote" />
+                            </div>
+                            <h3>"@review.Message"</h3>
+                            <div class="client-info">
+                                <h4>@review.Name</h4>
+                                @* <span>from @(string.IsNullOrEmpty(review.Country) ? "Unknown" : review.Country)</span> *@
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+
+    </div>
+</section>
+<!-- News Section Start -->
+<section class="news-section section-padding section-bg-2">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="wow fadeInUp" data-wow-delay=".3s">Latest Blog & News</span>
+            <h2 class="wow fadeInUp" data-wow-delay=".5s">Latest Travel Insights and <br> Destination Guides</h2>
+        </div>
+        <div class="row">
+            @foreach (var blog in Model.Blogs)
+            {
+                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="news-box-items-4">
+                        <div class="news-img">
+                            <img src="@blog.Image" alt="img" />
+                            <ul class="post-date">
+                                <li>@blog.CreatedDate.Day</li>
+                                <li>@blog.CreatedDate.ToString("MMM").ToUpper()</li>
+                            </ul>
+                        </div>
+                        <div class="news-content">
+                            <ul>
+                            </ul>
+                            <h3>
+                                <a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@blog.Id">
+                                    @blog.Title
+                                </a>
+                            </h3>
+                            <p>@blog.ShortDescription</p>
+                           @*  <a href="@Url.Action("Details", "Blog", new { id = blog.Id })" class="link-btn">
+                                Continue Reading <i class="far fa-long-arrow-right"></i>
+                            </a> *@
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Index", "New")" class="btn btn-primary">
+            More Blogs <i class="fas fa-arrow-right ms-1"></i>
+        </a>
+    </div>
+</section>
+
+<!-- Instagram Section Start -->
+<div class="instagram-section fix">
+    <div class="swiper instagram-slider">
+        <div class="swiper-wrapper">
+
+            @foreach (var item in Model.Instagrams)
+            {
+
+                <div class="swiper-slide">
+                    <div class="instagram-image">
+                        <img src="@item.Image" alt="img">
+                        <a href="#" class="icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    let skipCount = 4;
+    const totalTours = @Model.Tours.Count();
+
+    document.getElementById("show-more-btn").addEventListener("click", function () {
+        if (skipCount >= totalTours) {
+            document.getElementById("show-more-btn").style.display = "none";
+            return;
+        }
+
+        fetch(`/Home/LoadMoreTours?skip=${skipCount}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then(data => {
+                data.forEach(tour => {
+                    const container = document.getElementById("tour-container");
+                    const tourItem = document.createElement("div");
+                    tourItem.className = "col-xl-3 col-lg-6 col-md-6 tour-item";
+
+                    // ✅ Tarixi müqayisə edirik
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+
+                    const tourDate = new Date(tour.startDate); // Əsas odur ki, backenddə bu dəyər gəlir
+                    const isExpired = tourDate < today;
+
+                   tourItem.innerHTML = `
+                    <div class="tour-box-items">
+                        <div class="thumb position-relative">
+                            <img src="${tour.imageUrl}" alt="Tour image" />
+                            ${isExpired ? `<div class="expired-badge">Expired</div>` : ""}
+                        </div>
+                        <div class="content">
+                            <span>${tour.cityName}</span>
+                            <h4>
+                                ${isExpired 
+                                    ? `<span style="color: gray; cursor: not-allowed; text-decoration: line-through;" title="This tour is expired">${tour.name}</span>` 
+                                    : `<a href="/TourDetail/Index/${tour.id}">${tour.name}</a>
+`}
+                            </h4>
+                            <h6>From <span>$${tour.price}</span>${tour.oldPrice ? `<del>$${tour.oldPrice}</del>` : ""}</h6>
+                            <ul class="list">
+                                <li><i class="far fa-calendar"></i> ${tour.duration}</li>
+                                <li><i class="far fa-flag"></i> ${tour.countryCount} Countries</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+
+                                    container.appendChild(tourItem);
+                });
+                skipCount += 4;
+
+                if (skipCount >= totalTours) {
+                    document.getElementById("show-more-btn").style.display = "none";
+                }
+            })
+            .catch(error => {
+                console.error("Fetch error:", error);
+            });
+    });
+</script>

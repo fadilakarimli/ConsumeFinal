@@ -1,0 +1,36 @@
+﻿@model FinalProjectConsume.Models.SpecialOffer.SpecialOffer
+
+@{
+    ViewData["Title"] = "Special Offer Detail";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px; max-width:700px;">
+    <h2>@ViewData["Title"]</h2>
+
+    <div class="mb-3">
+        <label class="form-label"><strong>Small Title:</strong></label>
+        <p>@Model.TitleSmall</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><strong>Main Title:</strong></label>
+        <p>@Model.TitleMain</p>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><strong>Background Image:</strong></label><br />
+        <img src="@Model.BackgroundImageUrl" alt="Background Image" style="max-width:100%; height:auto;" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><strong>Discount Image:</strong></label><br />
+        <img src="@Model.DiscountImageUrl" alt="Discount Image" style="max-width:100%; height:auto;" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label"><strong>Bag Image:</strong></label><br />
+        <img src="@Model.BagImageUrl" alt="Bag Image" style="max-width:100%; height:auto;" />
+    </div>
+
+    <a asp-action="Index" asp-controller="SpecialOfferModel" asp-area="Admin" class="btn btn-secondary">Back to List</a>
+</div>

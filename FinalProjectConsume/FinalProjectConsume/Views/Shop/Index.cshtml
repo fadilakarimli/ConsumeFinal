@@ -1,0 +1,236 @@
+﻿<style>
+  .shop-container {
+    background-color: #f5f5f5;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .shop-container .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .shop-container .product-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .shop-container .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  }
+
+  .shop-container .product-image {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .shop-container .product-image img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+  }
+
+  .shop-container .product-card:hover .product-image img {
+    transform: scale(1.1);
+  }
+
+  .shop-container .add-to-cart {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(60px);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 10;
+  }
+
+  .shop-container .product-card:hover .add-to-cart {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .shop-container .add-to-cart button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+
+  .shop-container .add-to-cart button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  }
+
+  .shop-container .cart-icon {
+    background-color: white;
+    color: #667eea;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 16px;
+  }
+
+  .shop-container .product-info {
+    padding: 20px;
+  }
+
+  .shop-container .product-info .stars {
+    color: #ffd700;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 3px rgba(255, 215, 0, 0.3);
+  }
+
+  .shop-container .product-info h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0 15px 0;
+    color: #333;
+    line-height: 1.4;
+  }
+
+  .shop-container .product-info .price {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .shop-container .product-info .new-price {
+    color: #667eea;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .shop-container .product-info .old-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 14px;
+  }
+
+  .shop-container .badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff4757;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 5;
+  }
+
+  /* Responsive design */
+  media (max-width: 768px) {
+    .shop-container .products-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .shop-container .product-card {
+      max-width: 350px;
+      margin: 0 auto;
+    }
+  }
+
+  media (min-width: 769px) and (max-width: 1024px) {
+    .shop-container .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  media (min-width: 1025px) {
+    .shop-container .products-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
+
+    @model FinalProjectConsume.ViewModels.UI.ShopVM
+
+@{
+    ViewData["Title"] = "Shop";
+}
+
+<div class="shop-container">
+    <div class="products-grid">
+        @foreach (var product in Model.Products)
+        {
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="@product.Image" alt="@product.Name" />
+                    <div class="add-to-cart">
+                       @if (User.Identity.IsAuthenticated)
+                        {
+                            <form asp-controller="Shop" asp-action="AddToBasket" method="post">
+                                <input type="hidden" name="ProductId" value="@product.Id" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <input type="hidden" name="UserId" value="@User.Identity.Name" />  
+                                <button type="submit">Add To Cart 🛒</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <p><a asp-controller="Account" asp-action="Login">Please Log in</a> for added product</p>
+                        }
+
+
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>@product.Name</h3>
+                    <div class="price">
+                        <span class="new-price">$@product.Price</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<script>
+function addToCart(productId) {
+    fetch('/api/admin/Basket/GetUserBasket', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            userId: 'test-user',
+            productId: productId,
+            quantity: 1
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Məhsul səbətə əlavə olundu');
+            // Basket səhifəsini avtomatik yeniləmək istəyirsənsə, orada reload edə bilərsən
+        } else {
+            alert('Xəta baş verdi');
+        }
+    })
+    .catch(() => alert('Serverə qoşulmaq mümkün olmadı'));
+}
+
+</script>

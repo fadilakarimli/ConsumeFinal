@@ -1,0 +1,1897 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FinalProjectConsume.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FinalProjectConsume.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\css\\style.css",
+      "PackagePath": "staticwebassets\\admin\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\img\\testimonial-1.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\testimonial-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\img\\testimonial-2.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\testimonial-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\img\\user.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\user.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\index.html",
+      "PackagePath": "staticwebassets\\admin\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\js\\custom.js",
+      "PackagePath": "staticwebassets\\admin\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\js\\main.js",
+      "PackagePath": "staticwebassets\\admin\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\chart\\chart.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\chart\\chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\easing\\easing.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\css\\tempusdominus-bootstrap-4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\tempusdominus\\js\\moment-timezone.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\moment-timezone.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\tempusdominus\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\tempusdominus\\js\\tempusdominus-bootstrap-4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\waypoints\\links.php",
+      "PackagePath": "staticwebassets\\admin\\lib\\waypoints\\links.php"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\lib\\waypoints\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\admin\\lib\\waypoints\\waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_containers.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\admin\\scss\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\admin\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\css\\animate.css",
+      "PackagePath": "staticwebassets\\assets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\css\\datepickerboot.css",
+      "PackagePath": "staticwebassets\\assets\\css\\datepickerboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\assets\\css\\font-awesome.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\assets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\css\\main.css",
+      "PackagePath": "staticwebassets\\assets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\css\\meanmenu.css",
+      "PackagePath": "staticwebassets\\assets\\css\\meanmenu.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\assets\\css\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\css\\odometer.css",
+      "PackagePath": "staticwebassets\\assets\\css\\odometer.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\css\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\swiper-bundle.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\fa-light-300.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-light-300.eot"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\fa-light-300.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-light-300.woff"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\fa-light-300.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-light-300.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\flaticon.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\flaticon.eot"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\flaticon.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\flaticon.woff"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\fonts\\flaticon.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\flaticon.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\02.png",
+      "PackagePath": "staticwebassets\\assets\\img\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\404.png",
+      "PackagePath": "staticwebassets\\assets\\img\\404.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\about\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\about\\02.png",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\about\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\about\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\about\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\about\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\about\\about01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\about01.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\about\\circle-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\circle-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\about\\dot-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\dot-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\about\\group.png",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\group.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\about\\shape-1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\shape-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\apply-store.png",
+      "PackagePath": "staticwebassets\\assets\\img\\apply-store.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\brand1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\brand1.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\brand\\01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\brand\\02.png",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\brand\\03.png",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\brand\\04.png",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\04.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\brand\\05.png",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\05.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\brand\\06.png",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\06.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\breadcrumb-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\breadcrumb-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\breadcrumb-plane.png",
+      "PackagePath": "staticwebassets\\assets\\img\\breadcrumb-plane.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\call.png",
+      "PackagePath": "staticwebassets\\assets\\img\\call.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\choose-us\\01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\choose-us\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\choose-us\\02.png",
+      "PackagePath": "staticwebassets\\assets\\img\\choose-us\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\choose-us\\24.png",
+      "PackagePath": "staticwebassets\\assets\\img\\choose-us\\24.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\choose-us\\bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\choose-us\\bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\choose-us\\bg2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\choose-us\\bg2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\choose-us\\choose-us.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\choose-us\\choose-us.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\choose-us\\client-img.png",
+      "PackagePath": "staticwebassets\\assets\\img\\choose-us\\client-img.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\choose-us\\text.png",
+      "PackagePath": "staticwebassets\\assets\\img\\choose-us\\text.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\Mask group.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\Mask group.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\bag.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\bag.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\cta-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\cta-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\cta-3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\cta-3.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\cta-apps-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\cta-apps-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\cta-bg-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\cta-bg-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\cta-bg-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\cta-bg-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\cta-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\cta-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\cta-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\cta-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\cta-img.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\cta-img.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\cta-video.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\cta-video.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\discount.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\discount.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\left-plane.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\left-plane.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\mobile-app.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\mobile-app.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\offer-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\offer-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\olane-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\olane-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\plane-shape-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\plane-shape-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\plane-shape-3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\plane-shape-3.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\plane-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\plane-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\right-plane.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\right-plane.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\text-image.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\text-image.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\cta\\travel-text.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cta\\travel-text.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\07.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\08.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\09.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\10.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\11.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\12.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\13.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\14.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\15.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\16.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\17.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\18.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\19.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\20.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\21.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\22.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\23.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\24.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\25.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\25.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\26.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\26.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\27.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\27.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\28.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\28.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\29.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\29.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\30.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\30.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\31.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\31.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\32.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\32.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\33.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\33.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\34.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\34.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\details1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\details1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\disocunt.png",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\disocunt.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\new\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\new\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\new\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\new\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\new\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\new\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\new\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\new\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\new\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\new\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\offter-card.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\offter-card.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\shape-1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\shape-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\destinations\\shape-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\destinations\\shape-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\faq\\01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\faq\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\faq\\frame-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\faq\\frame-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\faq\\light-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\faq\\light-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\faq\\plane-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\faq\\plane-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\favicon.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\footer\\bg-image-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\footer\\bg-image-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\footer\\bg-image.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\footer\\bg-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\footer\\bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\footer\\bg.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\header\\home-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\header\\home-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\header\\home-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\header\\home-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\header\\home-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\header\\home-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\client.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\client.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\location.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\location.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\new\\frame-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\new\\frame-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\new\\hero-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\new\\hero-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\new\\hero-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\new\\hero-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\new\\hero-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\new\\hero-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\new\\hero-bg-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\new\\hero-bg-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\new\\hero-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\new\\hero-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\new\\light-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\new\\light-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\new\\line-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\new\\line-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\new\\line.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\new\\line.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\new\\percent.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\new\\percent.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\new\\plane-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\new\\plane-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\new\\plane-3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\new\\plane-3.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\new\\plane.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\new\\plane.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\offer.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\offer.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\plane-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\plane-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hero\\radius.png",
+      "PackagePath": "staticwebassets\\assets\\img\\hero\\radius.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hotel\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hotel\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hotel\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hotel\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hotel\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hotel\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\hotel\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\hotel\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\icon-01.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon-01.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\icon-02.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon-02.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\icon-3.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon-3.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\icon-4.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon-4.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\icon-5.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon-5.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\icon-6.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon-6.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\icon-7.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon-7.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\icon-8.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\icon-8.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\instagram\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\instagram\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\instagram\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\instagram\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\instagram\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\instagram\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\instagram\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\instagram\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\instagram\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\instagram\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\instagram\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\instagram\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\instagram\\07.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\instagram\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\instagram\\08.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\instagram\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\instagram\\hero-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\instagram\\hero-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\instagram\\hero-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\instagram\\hero-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\instagram\\hero-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\instagram\\hero-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\logo\\black-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\black-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\logo\\gallery-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\gallery-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\logo\\gallery-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\gallery-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\logo\\gallery-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\gallery-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\logo\\gallery-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\gallery-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\logo\\gallery-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\gallery-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\logo\\gallery-6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\gallery-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\logo\\gallery-7.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\gallery-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\logo\\gallery-8.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\gallery-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\logo\\gallery-9.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\gallery-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\logo\\white-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\white-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\mail.png",
+      "PackagePath": "staticwebassets\\assets\\img\\mail.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\marque.png",
+      "PackagePath": "staticwebassets\\assets\\img\\marque.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\author_img2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\author_img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\author_img3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\author_img3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\author_img4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\author_img4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\news-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\news-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\news-02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\news-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\news-03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\news-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\news-04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\news-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\news-05.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\news-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\news-06.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\news-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\news-07.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\news-07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\news-08.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\news-08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\news-09.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\news-09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\news-10.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\news-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\news-11.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\news-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\news-12.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\news-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\news-13.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\news-13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\post-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\post-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\post-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\post-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\post-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\post-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\post-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\post-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\post-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\post-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\pp1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\pp1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\pp2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\pp2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\news\\pp3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\news\\pp3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\play-store.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\play-store.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\07.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\08.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\09.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\10.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\11.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\12.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\details.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\details.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\frame.png",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\frame.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\plane-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\plane-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\team\\plane-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\team\\plane-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\testimonial\\01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\testimonial\\client-01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\client-01.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\testimonial\\client-02.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\client-02.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\testimonial\\client-03.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\client-03.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\testimonial\\client-04.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\client-04.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\testimonial\\client-top.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\client-top.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\testimonial\\quote-01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\quote-01.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\testimonial\\rating.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\rating.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\testimonial\\testimonial-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\testimonial-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\testimonial\\testimonial.png",
+      "PackagePath": "staticwebassets\\assets\\img\\testimonial\\testimonial.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\07.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\077.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\077.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\08.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\088.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\088.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\09.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\10.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\11.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\12.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\13.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\14.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\15.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\16.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\17.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\18.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\19.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\20.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\21.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\22.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\23.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\24.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\25.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\25.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\26.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\26.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\27.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\27.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\28.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\28.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\29.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\29.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\30.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\30.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\31.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\31.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\bg.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\bg2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\bg2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\circle.png",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\circle.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\circle2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\circle2.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\circle3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\circle3.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\client.png",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\client.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\details-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\details-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\new\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\new\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\new\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\new\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\new\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\new\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\new\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\new\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\new\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\new\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\new\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\new\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\new\\07.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\new\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\new\\08.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\new\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\new\\09.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\new\\09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\new\\bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\new\\bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\new\\shape-image-2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\new\\shape-image-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\new\\shape-image.png",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\new\\shape-image.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\pool-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\pool-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\post-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\post-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\post-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\post-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\post-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\post-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\quote.png",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\quote.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\shape1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\shape1.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\shape2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\shape2.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\tour\\shape3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\tour\\shape3.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\video-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\video-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\work-process\\01.png",
+      "PackagePath": "staticwebassets\\assets\\img\\work-process\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\work-process\\02.png",
+      "PackagePath": "staticwebassets\\assets\\img\\work-process\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\work-process\\03.png",
+      "PackagePath": "staticwebassets\\assets\\img\\work-process\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\img\\work-process\\line-shape.png",
+      "PackagePath": "staticwebassets\\assets\\img\\work-process\\line-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\ajax-mail.js",
+      "PackagePath": "staticwebassets\\assets\\js\\ajax-mail.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\bootstrap-datepicker.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap-datepicker.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\circle-progress.js",
+      "PackagePath": "staticwebassets\\assets\\js\\circle-progress.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\countdowncustom.js",
+      "PackagePath": "staticwebassets\\assets\\js\\countdowncustom.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\jquery-3.7.1.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-3.7.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\jquery.appear.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.appear.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\jquery.counterup.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.counterup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\jquery.meanmenu.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.meanmenu.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\jquery.waypoints.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.waypoints.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\odometer.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\odometer.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\swiper-bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\swiper-bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\viewport.jquery.js",
+      "PackagePath": "staticwebassets\\assets\\js\\viewport.jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_about.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_about.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_animation.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_animation.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_blog.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_blog.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_brand.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_brand.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_contact.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_cta.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_cta.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_destination.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_destination.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_faq.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_faq.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_feature.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_feature.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_footer.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_header.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_helping.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_helping.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_hero.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_hero.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_meanmenu.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_meanmenu.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_news-addons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_news-addons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_preloader.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_preloader.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_section.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_section.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_team.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_team.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_testimonial.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_testimonial.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_tour.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_tour.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_typography.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_typography.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\assets\\scss\\main.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\main.scss"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\Desktop\\exp\\final-project-backup\\FinalProjectConsume\\FinalProjectConsume\\wwwroot\\confirm\\verifyemail.html",
+      "PackagePath": "staticwebassets\\confirm\\verifyemail.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FinalProjectConsume.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.FinalProjectConsume.props",
+      "PackagePath": "build\\FinalProjectConsume.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.FinalProjectConsume.props",
+      "PackagePath": "buildMultiTargeting\\FinalProjectConsume.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.FinalProjectConsume.props",
+      "PackagePath": "buildTransitive\\FinalProjectConsume.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

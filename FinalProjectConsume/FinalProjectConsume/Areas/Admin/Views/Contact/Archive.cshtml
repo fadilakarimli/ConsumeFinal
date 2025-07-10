@@ -1,0 +1,38 @@
+﻿@model List<FinalProjectConsume.ViewModels.UI.ContactVM>
+
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+
+<h1>Archived Contact Messages</h1>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">No archived messages found.</div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>@Model[i].fullName</td>
+                    <td>@Model[i].email</td>
+                    <td>@Model[i].phoneNumber</td>
+                    <td>@Model[i].message</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+</div>

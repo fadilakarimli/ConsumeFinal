@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Subscribe";
+}
+
+<h2>Subscribe to our newsletter</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div style="color: green;">@TempData["SuccessMessage"]</div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div style="color: red;">@TempData["ErrorMessage"]</div>
+}
+
+<form asp-controller="Newsletter" asp-action="Subscribe" method="post">
+    <input type="email" name="email" placeholder="Enter your email" required />
+    <button type="submit">Subscribe</button>
+</form>

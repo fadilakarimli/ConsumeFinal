@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+    var message = ViewBag.Message as string;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Email Təsdiqləmə</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            background: #f8f8f8;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #3498db;
+        }
+        p {
+            font-size: 16px;
+        }
+    </style>
+
+    @if (!string.IsNullOrEmpty(message) && message.Contains("successfully"))
+    {
+        <script>
+            // 2 saniyə sonra login səhifəsinə yönləndirir
+            setTimeout(function () {
+                window.location.href = '@Url.Action("Login", "Account")';
+            }, 2000);
+        </script>
+    }
+</head>
+<body>
+    <div class="container">
+        <h2>Emailinizi təsdiqləyin</h2>
+
+        @if (!string.IsNullOrEmpty(message))
+        {
+            <p>@message</p>
+            <p>2 saniyə sonra avtomatik login səhifəsinə yönləndiriləcəksiniz...</p>
+        }
+        else
+        {
+            <p>Email ünvanınıza təsdiqləmə linki göndərildi.</p>
+        }
+    </div>
+    <script>
+        console.log("Message from backend: '@message'");
+    </script>
+</body>
+</html>

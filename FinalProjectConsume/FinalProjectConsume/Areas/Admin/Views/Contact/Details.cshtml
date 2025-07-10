@@ -1,0 +1,51 @@
+﻿@model FinalProjectConsume.ViewModels.UI.ContactVM
+
+@{
+    ViewData["Title"] = "Contact Message Details";
+}
+
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+
+
+<h1>Contact Message Details</h1>
+
+<div class="card">
+    <div class="card-body"style="color:red">
+        <dl class="row">
+            <dt class="col-sm-3">Full Name:</dt>
+            <dd class="col-sm-9">@Model.fullName</dd>
+             
+
+            <dt class="col-sm-3">Email:</dt>
+            <dd class="col-sm-9">@Model.email</dd>
+
+            <dt class="col-sm-3">Phone Number:</dt>
+            <dd class="col-sm-9">@Model.phoneNumber</dd>
+
+            <dt class="col-sm-3">Message:</dt>
+            <dd class="col-sm-9">@Model.message</dd>
+        </dl>
+    </div>
+
+        <form asp-action="Reply" method="post">
+            <input type="hidden" name="id" value="@Model.id" />
+            <div class="form-group">
+                <label for="replyMessage">Reply Message</label>
+                <textarea name="replyMessage" id="replyMessage" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Send Reply</button>
+        </form>
+
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success mt-2">
+                @TempData["Success"]
+            </div>
+        }
+    <div class="card-footer">
+        <a class="btn btn-secondary" asp-area="Admin" asp-controller="Contact" asp-action="Index">Back to List</a>
+    </div>
+</div>
+
+</div>

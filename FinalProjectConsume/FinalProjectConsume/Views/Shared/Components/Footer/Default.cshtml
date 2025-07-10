@@ -1,0 +1,297 @@
+﻿@model IEnumerable<SettingVM>
+
+<footer class="footer-section fix section-bg bg-cover" style="background-image: url('assets/img/footer/bg-image.jpg');">
+    <div class="container">
+        <div class="footer-newsletter-items">
+            <h2>Get Updated the Our Latest Newsletter</h2>
+            <form id="tokenForm" style="display: none;">
+                @Html.AntiForgeryToken()
+            </form>
+
+            <div class="footer-input">
+                <input type="email" id="subscribeEmail" placeholder="Enter your email">
+                <button class="newsletter-btn" id="subscribeBtn" type="button">
+                    Subscribe <i class="far fa-search"></i>
+                </button>
+            </div>
+            <div id="subscribeMessage" style="color:black;margin-top:10px;"></div>
+
+      <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const subscribeBtn = document.getElementById("subscribeBtn");
+        const emailInput = document.getElementById("subscribeEmail");
+        const messageBox = document.getElementById("subscribeMessage");
+
+        // 🔽 Login olub-olmadığını serverdən gələn dəyişənlə yoxla
+        const isAuthenticated = @User.Identity.IsAuthenticated.ToString().ToLower(); // true/false kimi gələcək
+
+        subscribeBtn.addEventListener("click", async function () {
+            // 🔒 Əgər login deyilsə, blokla
+            if (!isAuthenticated || isAuthenticated === "false") {
+                messageBox.innerText = "Zəhmət olmasa abunə olmaq üçün hesabınıza daxil olun.";
+                return;
+            }
+
+            const email = emailInput.value.trim();
+
+            if (!email || !email.includes("\u0040")) {
+                messageBox.innerText = "Zəhmət olmasa düzgün email daxil edin.";
+                return;
+            }
+
+            const token = document.querySelector('#tokenForm input[name="__RequestVerificationToken"]')?.value;
+
+            try {
+                const response = await fetch("/Home/Subscribe", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "RequestVerificationToken": token
+                    },
+                    body: JSON.stringify({ email })
+                });
+
+                const result = await response.text();
+                console.log("Serverdən cavab:", result);
+
+                if (response.ok) {
+                    messageBox.innerText = "Abunəlik uğurla əlavə olundu.";
+                    emailInput.value = "";
+                } else {
+                    console.error("Server error cavabı:", result);
+                    messageBox.innerText = "Xəta baş verdi: " + result;
+                }
+
+            } catch (error) {
+                console.error("Xəta:", error);
+                messageBox.innerText = "Serverlə əlaqə zamanı xəta baş verdi.";
+            }
+        });
+    });
+</script>
+
+
+
+
+
+        </div>
+        <div class="footer-wrapper">
+            <div class="row">
+                <div class="col-xl-5 col-lg-7 col-md-12">
+                    <div class="footer-widget-items">
+                        <div class="widget-title">
+                            <a asp-action="Index" asp-controller="Home" class="footer-logo">
+                                <img src="~/assets/img/logo/@Model.FirstOrDefault(x => x.Key == "HeaderLogo")?.Value">
+                            </a>
+                        </div>
+                        <div class="footer-content">
+                            <div class="contact-info-items">
+                                <div class="contact-items">
+                                    <div class="icon">
+                                        <img src="~/assets/img/call.png" alt="img">
+                                    </div>
+                                    <div class="content">
+                                        <span>Call Us</span>
+                                        @* <h6><a href="tel:+8809533309">+88 (09) 53 33 09</a></h6> *@          
+                                        <h6>@Model.FirstOrDefault(x => x.Key == "Phone")?.Value</h6>
+
+                                    </div>
+                                </div>
+                                <div class="contact-items">
+                                    <div class="icon">
+                                        <img src="~/assets/img/mail.png" alt="img">
+                                    </div>
+                                    <div class="content">
+                                        <span>Mail Us</span>
+                                      @*   <h6><a href="mailto:info@example.com">info@example.com</a></h6> *@
+
+                                        <h6>@Model.FirstOrDefault(x => x.Key == "Email")?.Value</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <h6 class="app-text">Your all-in-one travel app</h6>
+                            <div class="apps-items">
+                                <a href="contact.html">
+                                    <img src="~/assets/img/apply-store.png" alt="img">
+                                </a>
+                                <a href="contact.html">
+                                    <img src="~/assets/img/play-store.jpg" alt="img">
+                                </a>
+                            </div>
+                            <div class="social-icon">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-5 col-md-4 col-sm-6">
+                    <div class="footer-widget-items">
+                        <div class="widget-title">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul class="list-items">
+                            <li>
+                                <a asp-action="Index" asp-controller="Destination">All Destination</a>
+                            </li>
+                            <li>
+                                <a asp-action="Index" asp-controller="Contact">24/7 Support</a>
+                            </li>
+                            <li>
+                                <a asp-action="Index" asp-controller="Team">Our Team</a>
+                            </li>
+                            <li>
+                                <a asp-action="Index" asp-controller="Tour">Tour Places</a>
+                            </li>
+                            <li>
+                                <a asp-action="Index" asp-controller="Tour">Reviews</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
+                    <div class="footer-widget-items">
+                        <div class="widget-title">
+                            <h3>About Travil</h3>
+                        </div>
+                        <ul class="list-items">
+                            <li>
+                                <a asp-action="Index" asp-controller="About">About Us</a>
+                            </li>
+                            <li>
+                                <a sp-action="Index" asp-controller="Contact">Legal Notice</a>
+                            </li>
+                            <li>
+                                <a sp-action="Index" asp-controller="Contact">Terms & Condition</a>
+                            </li>
+                            <li>
+                                <a sp-action="Index" asp-controller="Contact">Contact Us</a>
+                            </li>
+                            <li>
+                                <a sp-action="Index" asp-controller="About">Apple Store</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-4">
+                    <div class="footer-widget-items">
+                        <div class="widget-title">
+                            <h3>Gallery</h3>
+                        </div>
+                        <div class="footer-gallery">
+                            <div class="gallery-wrap">
+                                <div class="gallery-item">
+                                    <div class="thumb">
+                                        <a class="img-popup">
+                                            <img src="~/assets/img/logo/@Model.FirstOrDefault(x => x.Key == "Gallery1")?.Value" alt="gallery-img">
+                                            <div class="icon">
+                                                <i class="far fa-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="thumb">
+                                        <a class="img-popup">
+                                            <img src="~/assets/img/logo/@Model.FirstOrDefault(x => x.Key == "Gallery2")?.Value" alt="gallery-img">
+                                            <div class="icon">
+                                                <i class="far fa-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="thumb">
+                                        <a class="img-popup">
+                                            <img src="~/assets/img/logo/@Model.FirstOrDefault(x => x.Key == "Gallery3")?.Value" alt="gallery-img">
+                                            <div class="icon">
+                                                <i class="far fa-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="thumb">
+                                        <a class="img-popup">
+                                            <img src="~/assets/img/logo/@Model.FirstOrDefault(x => x.Key == "Gallery4")?.Value" alt="gallery-img">
+                                            <div class="icon">
+                                                <i class="far fa-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="thumb">
+                                        <a class="img-popup">
+                                            <img src="~/assets/img/logo/@Model.FirstOrDefault(x => x.Key == "Gallery5")?.Value" alt="gallery-img">
+                                            <div class="icon">
+                                                <i class="far fa-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="thumb">
+                                        <a class="img-popup">
+                                            <img src="~/assets/img/logo/@Model.FirstOrDefault(x => x.Key == "Gallery6")?.Value" alt="gallery-img">
+                                            <div class="icon">
+                                                <i class="far fa-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="thumb">
+                                        <a class="img-popup">
+                                            <img src="~/assets/img/logo/@Model.FirstOrDefault(x => x.Key == "Gallery7")?.Value" alt="gallery-img">
+                                            <div class="icon">
+                                                <i class="far fa-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="thumb">
+                                        <a class="img-popup">
+                                            <img src="~/assets/img/logo/@Model.FirstOrDefault(x => x.Key == "Gallery8")?.Value" alt="gallery-img">
+                                            <div class="icon">
+                                                <i class="far fa-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="thumb">
+                                        <a class="img-popup">
+                                            <img src="~/assets/img/logo/@Model.FirstOrDefault(x => x.Key == "Gallery9")?.Value" alt="gallery-img">
+                                            <div class="icon">
+                                                <i class="far fa-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom-1">
+        <div class="container">
+            <div class="footer-bottom-wrapper">
+                <p class="wow fadeInUp" data-wow-delay=".3s">
+                    © 2025 Travil LLC All rights reserved.
+                </p>
+                <ul class="footer-menu wow fadeInUp" data-wow-delay=".5s">
+                    <li>
+                        <a href="contact.html">
+                            Privacy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Terms
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Site Map
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

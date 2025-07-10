@@ -1,0 +1,30 @@
+﻿@model IEnumerable<FinalProjectConsume.ViewModels.UI.SettingVM>
+
+@{
+    ViewData["Title"] = "Settings List";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>@ViewData["Title"]</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var setting in Model)
+            {
+                <tr id="setting-row-@setting.Id">
+                    <td>@setting.Key</td>
+                    <td>@setting.Value</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@setting.Id" class="btn btn-warning btn-sm">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

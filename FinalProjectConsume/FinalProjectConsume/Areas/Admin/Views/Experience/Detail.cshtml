@@ -1,0 +1,20 @@
+﻿@model FinalProjectConsume.Models.Experience.Experience
+
+@{
+    ViewData["Title"] = "Experience Detail";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+
+<div>
+    <h4>@Model.Name</h4>
+    <dl class="row">
+        <dt class="col-sm-2">Tour Name</dt>
+        <dd class="col-sm-10">@Model.TourName</dd>
+    </dl>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary">Back</a>
+</div>

@@ -1,0 +1,30 @@
+﻿@model FinalProjectConsume.Models.Plan.PlanEdit
+
+<div class="container mt-5" style="margin-left:300px;">
+    <h2>Edit Plan</h2>
+    <form asp-action="Edit" method="post">
+        <div class="form-group">
+            <label asp-for="Day"></label>
+            <input asp-for="Day" class="form-control" />
+            <span asp-validation-for="Day" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="TourId"></label>
+            <select asp-for="TourId" class="form-control" asp-items="Model.Tours">
+                <option value="">-- Select Tour --</option>
+            </select>
+            <span asp-validation-for="TourId" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-warning mt-3">Save Changes</button>
+    </form>
+</div>

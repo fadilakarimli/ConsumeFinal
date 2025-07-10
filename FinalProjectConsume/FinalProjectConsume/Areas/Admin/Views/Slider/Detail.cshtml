@@ -1,0 +1,14 @@
+﻿@model FinalProjectConsume.Models.Slider.Slider
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>Slider Details</h2>
+
+    <div class="form-group">
+        <label>Image:</label>
+        <div>
+            <img src="@Model.Img" alt="Slider Image" style="max-width: 400px;" class="img-thumbnail" />
+        </div>
+    </div>
+
+    <a asp-action="Index" class="btn btn-secondary mt-3">Back to List</a>
+</div>

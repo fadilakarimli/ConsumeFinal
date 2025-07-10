@@ -1,0 +1,42 @@
+﻿@model FinalProjectConsume.Models.AboutApp.AboutApp
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>About App Details</h2>
+
+    <div class="form-group">
+        <label>Title:</label>
+        <p>@Model.Title</p>
+    </div>
+
+    <div class="form-group">
+        <label>Description:</label>
+        <p>@Model.Desc</p>
+    </div>
+
+    <div class="form-group">
+        <label>Text:</label>
+        <p>@Model.Text</p>
+    </div>
+
+    <div class="form-group">
+        <label>Main Image:</label><br />
+        <img src="@Model.Image" alt="Main Image" style="max-width: 300px;" />
+    </div>
+
+    <div class="form-group">
+        <label>Apple Store Image:</label><br />
+        <img src="@Model.AppleImage" alt="Apple Store Image" style="max-width: 150px;" />
+    </div>
+
+    <div class="form-group">
+        <label>Play Store Image:</label><br />
+        <img src="@Model.PlayStoreImage" alt="Play Store Image" style="max-width: 150px;" />
+    </div>
+
+    <div class="form-group">
+        <label>Background Image:</label><br />
+        <img src="@Model.BackgroundImage" alt="Background Image" style="max-width: 300px;" />
+    </div>
+
+    <a asp-area="Admin" asp-controller="AboutApp" asp-action="Index" class="btn btn-secondary mt-3">Back to List</a>
+</div>

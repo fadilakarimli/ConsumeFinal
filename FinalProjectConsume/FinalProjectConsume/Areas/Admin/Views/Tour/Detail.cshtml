@@ -1,0 +1,188 @@
+﻿@model FinalProjectConsume.Models.Tour.Tour
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>Tour Details</h2>
+
+    <div class="form-group">
+        <label>Name:</label>
+        <p>@Model.Name</p>
+    </div>
+
+    <div class="form-group">
+        <label>Duration:</label>
+        <p>@Model.Duration</p>
+    </div>
+    <div class="form-group">
+        <label>Countries:</label>
+        @if (Model.CountryNames != null && Model.CountryNames.Any())
+        {
+            <ul>
+                @foreach (var country in Model.CountryNames)
+                {
+                    <li>@country</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No countries available.</p>
+        }
+    </div>
+
+    <div class="form-group">
+        <label>Price:</label>
+        <p>$@Model.Price</p>
+    </div>
+    <div class="form-group">
+        <label>Start Time:</label>
+        <p>
+            @if (!string.IsNullOrEmpty(Model.StartDate))
+            {
+                DateTime dtStart;
+                if (DateTime.TryParseExact(Model.StartDate, "MM.dd.yyyy", null, System.Globalization.DateTimeStyles.None, out dtStart))
+                {
+                    @dtStart.ToString("MM.dd.yyyy")
+                }
+                else
+                {
+                    @Model.StartDate
+                }
+            }
+            else
+            {
+                <text>No start time available</text>
+            }
+        </p>
+    </div>
+
+    <div class="form-group">
+        <label>End Time:</label>
+        <p>
+            @if (!string.IsNullOrEmpty(Model.EndDate))
+            {
+                DateTime dtEnd;
+                if (DateTime.TryParseExact(Model.EndDate, "dd.MM.yyyy", null, System.Globalization.DateTimeStyles.None, out dtEnd))
+                {
+                    @dtEnd.ToString("dd.MM.yyyy")
+                }
+                else
+                {
+                    @Model.EndDate
+                }
+            }
+            else
+            {
+                <text>No end time available</text>
+            }
+        </p>
+    </div>
+
+
+
+    @if (Model.OldPrice.HasValue)
+    {
+        <div class="form-group">
+            <label>Old Price:</label>
+            <p><del>$@Model.OldPrice</del></p>
+        </div>
+    }
+
+    <div class="form-group">
+        <label>City:</label>
+        @if (Model.CityNames != null && Model.CityNames.Any())
+        {
+            <ul>
+                @foreach (var city in Model.CityNames)
+                {
+                    <li>@city</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No cities available.</p>
+        }
+    </div>
+
+
+    <div class="form-group">
+        <label>Image:</label><br />
+        <img src="@Model.ImageUrl" alt="@Model.Name" style="max-width: 300px; max-height: 200px;" />
+    </div>
+
+    <div class="form-group">
+        <label>Activities:</label>
+        @if (Model.ActivityNames != null && Model.ActivityNames.Any())
+        {
+            <ul>
+                @foreach (var activity in Model.ActivityNames)
+                {
+                    <li>@activity</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No activities available.</p>
+        }
+    </div>
+
+    <div class="form-group">
+        <label>Amenities:</label>
+        @if (Model.Amenities != null && Model.Amenities.Any())
+        {
+            <ul>
+                @foreach (var amenity in Model.Amenities)
+                {   
+                    <li>@amenity</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No amenities available.</p>
+        }
+    </div>
+
+    <div class="form-group">
+        <label>Plans:</label>
+        @if (Model.Plans != null && Model.Plans.Any())
+        {
+            foreach (var plan in Model.Plans)
+            {
+                
+                <p> Day: @plan.Day</p> 
+                <p> Title:@plan.Title</p> 
+                <p>Description: @plan.Description</p> 
+            }
+        }
+        else
+        {
+            <p>No plans available</p>
+        }
+
+    </div>
+
+
+   
+
+    <div class="form-group">
+        <label>Experiences:</label>
+        @if (Model.ExperienceNames != null && Model.ExperienceNames.Any())
+        {
+            <ul>
+                @foreach (var experience in Model.ExperienceNames)
+                {
+                    <li>@experience</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No experiences available.</p>
+        }
+    </div>
+
+
+    <a asp-action="Index" asp-area="Admin" class="btn btn-secondary mt-3">Back to List</a>
+</div>

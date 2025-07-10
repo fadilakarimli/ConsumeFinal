@@ -1,0 +1,41 @@
+﻿@model FinalProjectConsume.Models.AboutTravil.AboutTravil
+
+@{
+    ViewData["Title"] = "About Travil Details";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>About Travil Details</h2>
+
+    <div class="form-group">
+        <label>Title:</label>
+        <p>@Model.Title</p>
+    </div>
+
+    <div class="form-group">
+        <label>Description:</label>
+        <p>@Model.Desc</p>
+    </div>
+
+    <div class="form-group">
+        <label>Subtitle:</label>
+        <p>@Model.Subtitle</p>
+    </div>
+
+    <div class="form-group">
+        <label>Sub Description:</label>
+        <p>@Model.SubDesc</p>
+    </div>
+
+    <div class="form-group">
+        <label>Image:</label><br />
+        <img src="@Model.Image" alt="Main Image" style="max-width: 300px; height:auto;" />
+    </div>
+
+    <div class="form-group">
+        <label>Small Image:</label><br />
+        <img src="@Model.SmallImage" alt="Small Image" style="max-width: 200px; height:auto;" />
+    </div>
+
+    <a asp-action="Index" asp-controller="AboutTravil" asp-area="Admin" class="btn btn-secondary mt-3">Back to List</a>
+</div>

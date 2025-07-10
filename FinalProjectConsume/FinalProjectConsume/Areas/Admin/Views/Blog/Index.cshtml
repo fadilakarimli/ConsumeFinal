@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Blog>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <div class="col-sm-12 col-xl-10">
+        <a asp-controller="Blog" asp-action="Create" class="btn btn-success mb-3">Create</a>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>ShowDescription</th>
+                    <th>Content</th>
+                    @* <th>Author</th> *@
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr id="blog-row-@item.Id">
+                        <td>
+                            <img src="@item.Image" style="width:150px; height:100px;" />
+                        </td>
+                        <td>@item.Title</td>
+                        <td>@item.ShortDescription</td>
+                        <td>@item.Content</td>
+                        @* <td>@item.Author</td> *@
+                        <td>
+                                 @if (User.IsInRole("SuperAdmin") || User.HasClaim("Permission", "DeleteBlog"))
+                                 {
+                                   <button class="btn btn-danger btn-sm btn-delete" data-id="@item.Id">Delete</button>
+                                 }
+                                 @if (User.IsInRole("SuperAdmin") || User.HasClaim("Permission", "UpdateBlog"))
+                                 {
+                                   <a class="btn btn-warning btn-sm" asp-controller="Blog" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                 }
+
+                            <a class="btn btn-info btn-sm" asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const deleteButtons = document.querySelectorAll(".btn-delete");
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success me-2",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+        });
+
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const id = this.getAttribute("data-id");
+
+                swalWithBootstrapButtons.fire({
+                    title: "Are you sure you want to delete this blog?",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Yes, delete it!",
+                    cancelButtonText: "No, cancel!",
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Anti-forgery token varsa götür, yoxdursa boş string qoy
+                        const tokenElement = document.querySelector('input[name="__RequestVerificationToken"]');
+                        const token = tokenElement ? tokenElement.value : '';
+
+                        fetch(`/Admin/Blog/Delete/${id}`, {
+                            method: "POST",
+                            headers: {
+                                'RequestVerificationToken': token
+                            }
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    // Silinmiş sətri id ilə tapıb DOM-dan çıxarırıq
+                                    const row = document.getElementById(`blog-row-${id}`);
+                                    if (row) row.remove();
+
+                                    swalWithBootstrapButtons.fire("Deleted!", "Blog has been deleted.", "success");
+                                } else {
+                                    swalWithBootstrapButtons.fire("Error!", "Something went wrong.", "error");
+                                }
+                            })
+                            .catch(() => {
+                                swalWithBootstrapButtons.fire("Error!", "Something went wrong.", "error");
+                            });
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                        swalWithBootstrapButtons.fire("Cancelled", "Blog is safe :)", "info");
+                    }
+                });
+            });
+        });
+    });
+
+</script>

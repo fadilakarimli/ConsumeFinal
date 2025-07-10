@@ -1,0 +1,44 @@
+﻿@model IEnumerable<FinalProjectConsume.ViewModels.RoleVM>
+
+@{
+    ViewData["Title"] = "Rollar";
+}
+
+<div class="container" style="margin-left:240px; margin-top:50px;">
+
+    <h2>Rollar</h2>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success">@TempData["Message"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var role in Model)
+            {
+                <tr>
+                    <td>@role.Name</td>
+                    <td>
+                        @if (!string.Equals(role.Name, "SuperAdmin", StringComparison.OrdinalIgnoreCase) &&
+                       !string.Equals(role.Name, "Member", StringComparison.OrdinalIgnoreCase))
+                        {
+                            <a asp-action="Permissions" asp-route-roleName="@role.Name" class="btn btn-info btn-sm ml-1">Permissions</a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,34 @@
+﻿@model FinalProjectConsume.Models.AboutTeamMember.AboutTeamMember
+
+@{
+    ViewData["Title"] = "Team Member Detail";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>@ViewData["Title"]</h2>
+
+    <div class="form-group">
+        <label>Full Name:</label>
+        <p>@Model.FullName</p>
+    </div>
+
+    <div class="form-group">
+        <label>Position:</label>
+        <p>@Model.Position</p>
+    </div>
+
+    <div class="form-group">
+        <label>About:</label>
+        <p>@Model.About</p>
+    </div>
+
+    <div class="form-group">
+        <label>Image:</label>
+        <br />
+        <img src="@Model.Image" alt="Team Member Image" style="max-width:300px; max-height:300px;" />
+    </div>
+
+    <p>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </p>
+</div>

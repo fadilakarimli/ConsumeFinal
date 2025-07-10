@@ -1,0 +1,136 @@
+﻿@model FinalProjectConsume.Models.Tour.TourEdit
+
+@{
+    ViewData["Title"] = "Edit Tour";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>Edit Tour</h2>
+
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Duration"></label>
+            <input asp-for="Duration" class="form-control" />
+            <span asp-validation-for="Duration" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+
+            <label style="color: red;">Select Countries</label>
+
+
+            @if (Model.Countries != null)
+            {
+                foreach (var item in Model.Countries)
+                {
+                    var checkedVal = Model.CountryIds.Contains(int.Parse(item.Value)) ? "checked" : "";
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="CountryIds" value="@item.Value" id="country_@item.Value" @checkedVal />
+                        <label class="form-check-label" for="country_@item.Value">@item.Text</label>
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="form-group">
+
+            <label style="color: red;">Select Cities</label>
+
+
+            @if (Model.Cities != null)
+            {
+                foreach (var item in Model.Cities)
+                {
+                    var checkedVal = Model.CityIds.Contains(int.Parse(item.Value)) ? "checked" : "";
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="CityIds" value="@item.Value" id="city_@item.Value" @checkedVal />
+                        <label class="form-check-label" for="city_@item.Value">@item.Text</label>
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="form-group">
+            <label style="color: red;">Select Activities</label>
+            @if (Model.Activities != null)
+            {
+                foreach (var item in Model.Activities)
+                {
+                    var checkedVal = Model.ActivityIds.Contains(int.Parse(item.Value)) ? "checked" : "";
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="ActivityIds" value="@item.Value" id="activity_@item.Value" @checkedVal />
+                        <label class="form-check-label" for="activity_@item.Value">@item.Text</label>
+                    </div>
+                }
+            }
+        </div>
+
+
+        <div class="form-group">
+            <label style="color: red;">Select Amenities</label>
+
+            @if (Model.Amenities != null)
+            {
+                foreach (var item in Model.Amenities)
+                {
+                    var checkedVal = Model.AmenityIds.Contains(int.Parse(item.Value)) ? "checked" : "";
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="AmenityIds" value="@item.Value" id="amenity_@item.Value" @checkedVal />
+                        <label class="form-check-label" for="amenity_@item.Value">@item.Text</label>
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Price"></label>
+            <input asp-for="Price" type="number" step="0.01" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="OldPrice"></label>
+            <input asp-for="OldPrice" type="number" step="0.01" class="form-control" />
+            <span asp-validation-for="OldPrice" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Capacity"></label>
+            <input asp-for="Capacity" type="number" class="form-control" />
+            <span asp-validation-for="Capacity" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Desc"></label>
+            <textarea asp-for="Desc" class="form-control"></textarea>
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="StartTime"></label>
+            <input asp-for="StartTime" type="date" class="form-control" />
+            <span asp-validation-for="StartTime" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="EndTime"></label>
+            <input asp-for="EndTime" type="date" class="form-control" />
+            <span asp-validation-for="EndTime" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ImageFile">Select New Image (optional)</label>
+            <input asp-for="ImageFile" type="file" class="form-control" />
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+﻿@model FinalProjectConsume.Models.Instagram.InstagramEdit
+
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>Edit Instagram</h2>
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label for="Image">Select New Image</label>
+            <input asp-for="Image" type="file" class="form-control" />
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+    </form>
+</div>
+

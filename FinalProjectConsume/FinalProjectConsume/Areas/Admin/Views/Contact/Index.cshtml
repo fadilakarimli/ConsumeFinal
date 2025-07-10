@@ -1,0 +1,52 @@
+﻿@model List<FinalProjectConsume.ViewModels.UI.ContactVM>
+
+@{
+    ViewData["Title"] = "Contact Messages";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+
+<h1>Contact Messages</h1>
+
+
+    <a class="btn btn-secondary mb-3" asp-area="Admin" asp-controller="Contact" asp-action="Archive">
+        <i class="fas fa-archive"></i> Archive
+    </a>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">No contact messages found.</div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Message</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>@Model[i].fullName</td>
+                    <td>@Model[i].email</td>
+                    <td>@Model[i].phoneNumber</td>
+                    <td>@Model[i].message</td>
+                    <td>
+                        <a class="btn btn-info btn-sm" asp-area="Admin" asp-controller="Contact" asp-action="Details" asp-route-id="@Model[i].id">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+</div>

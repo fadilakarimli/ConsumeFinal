@@ -1,0 +1,57 @@
+﻿@using FinalProjectConsume.Models.Booking
+@using FinalProjectConsume.Enums
+
+@model List<Booking>
+
+<h2>Booking</h2>
+<div class="container" style="margin-left:240px; margin-top:50px;">
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tour</th>
+            <th>Date</th>
+            <th>AdultCount</th>
+            <th>ChildCount</th>
+            <th>Total</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model)
+        {
+            <tr>
+                <td>@booking.TourName</td>
+                <td>@booking.BookingDate.ToString("dd.MM.yyyy")</td>
+                <td>@booking.AdultsCount</td>
+                <td>@booking.ChildrenCount</td>
+                <td>@booking.TotalPrice</td>
+                <td>@booking.UserEmail</td>
+                <td>@((BookingStatus)booking.Status)</td>
+                <td>
+                    @if (User.IsInRole("SuperAdmin"))
+                    {
+                            <form  asp-area="Admin" asp-controller="Booking" asp-action="UpdateStatus" method="post" style="display:inline;">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="bookingId" value="@booking.Id" />
+
+                                <select name="status" class="form-select form-select-sm">
+                                    @* <option value="0" selected="@(booking.Status == 0 ? "selected" : "")">Pending</option> *@
+                                    <option value="1" selected="@(booking.Status == 1 ? "selected" : "")">Accepted</option>
+                                    <option value="2" selected="@(booking.Status == 2 ? "selected" : "")">Cancelled</option>
+                                </select>
+                                <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                            </form>
+                    }
+                    else
+                    {
+                        <span>dont permisson</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

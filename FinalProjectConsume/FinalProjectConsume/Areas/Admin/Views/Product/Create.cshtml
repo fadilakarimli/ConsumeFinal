@@ -1,0 +1,33 @@
+﻿@model FinalProjectConsume.Models.Product.ProductCreate
+
+@{
+    ViewData["Title"] = "Yeni Məhsul Əlavə Et";
+}
+
+<h2>@ViewData["Title"]</h2>
+<div class="container" style="margin-left:200px; margin-top:50px;">
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Price" class="form-label"></label>
+        <input asp-for="Price" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Image" class="form-label">Şəkil (optional)</label>
+        <input asp-for="Image" class="form-control" type="file" />
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Yadda saxla</button>
+    <a asp-action="Index" class="btn btn-secondary">Ləğv et</a>
+</form>
+
+</div>

@@ -1,0 +1,104 @@
+﻿@model IEnumerable<FinalProjectConsume.Models.TrandingDestination.TrandingDestination>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <div class="col-sm-12 col-xl-10">
+        <a asp-controller="TrandingDestination" asp-action="Create" asp-area="Admin" class="btn btn-success mb-3">Create</a>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr id="destination-row-@item.Id">
+                        <td>
+                            <img src="@item.Image" alt="Image" style="width:150px; height:100px;" />
+                        </td>
+                        <td>@item.Title</td>
+                        <td>
+                            <button type="button" class="btn btn-danger btn-sm btn-delete" data-id="@item.Id">Delete</button>
+                            <a class="btn btn-warning btn-sm" asp-controller="TrandingDestination" asp-action="Edit" asp-route-id="@item.Id" asp-area="Admin">Edit</a>
+                            <a class="btn btn-info btn-sm" asp-controller="TrandingDestination" asp-action="Detail" asp-route-id="@item.Id" asp-area="Admin">Detail</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const deleteButtons = document.querySelectorAll(".btn-delete");
+
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success me-2",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+        });
+
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const id = this.getAttribute("data-id");
+
+                swalWithBootstrapButtons.fire({
+                    title: "Are you sure?",
+                    text: "This destination will be deleted!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Yes, delete it!",
+                    cancelButtonText: "No, cancel!",
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        fetch(`/Admin/TrandingDestination/Delete?id=${id}`, {
+                            method: "POST",
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    document.getElementById(`destination-row-${id}`).remove();
+                                    swalWithBootstrapButtons.fire(
+                                        "Deleted!",
+                                        "Destination has been deleted.",
+                                        "success"
+                                    );
+                                } else {
+                                    swalWithBootstrapButtons.fire(
+                                        "Error!",
+                                        "An error occurred while deleting.",
+                                        "error"
+                                    );
+                                }
+                            })
+                            .catch(error => {
+                                console.error("Error:", error);
+                                swalWithBootstrapButtons.fire(
+                                    "Error!",
+                                    "Something went wrong.",
+                                    "error"
+                                );
+                            });
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                        swalWithBootstrapButtons.fire(
+                            "Cancelled",
+                            "Destination is safe.",
+                            "info"
+                        );
+                    }
+                });
+            });
+        });
+    });
+
+</script>

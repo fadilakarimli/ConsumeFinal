@@ -1,0 +1,101 @@
+﻿@model IEnumerable<FinalProjectConsume.Models.AboutBlog.AboutBlog>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <div class="col-sm-12 col-xl-10">
+        <div id="create-button-wrapper">
+                <a asp-controller="AboutBlog" asp-action="Create" asp-area="Admin" class="btn btn-success mb-3">Create</a>
+        </div>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Create Date</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr id="aboutblog-row-@item.Id">
+                        <td><img src="@item.Image" alt="Image" style="width:150px; height:100px; object-fit:cover;" /></td>
+                        <td>@item.Name</td>
+                        <td>@item.Desc</td>
+                        <td>@item.CreatedDate.ToString("dd.MM.yyyy")</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm btn-delete" data-id="@item.Id">Delete</button>
+                            <a class="btn btn-warning btn-sm" asp-controller="AboutBlog" asp-action="Edit" asp-route-id="@item.Id" asp-area="Admin">Edit</a>
+                            <a class="btn btn-info btn-sm" asp-controller="AboutBlog" asp-action="Detail" asp-route-id="@item.Id" asp-area="Admin">Detail</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const deleteButtons = document.querySelectorAll(".btn-delete");
+
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success me-2",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+        });
+
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const id = this.getAttribute("data-id");
+
+                swalWithBootstrapButtons.fire({
+                    title: "Are you sure you want to delete this blog?",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Yes, delete it!",
+                    cancelButtonText: "No, cancel!",
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        fetch(`/Admin/AboutBlog/Delete/${id}`, {
+                            method: "POST"
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    document.getElementById(`aboutblog-row-${id}`).remove();
+
+                                    const remainingRows = document.querySelectorAll("tbody tr").length;
+                                    if (remainingRows === 0) {
+                                        const wrapper = document.getElementById("create-button-wrapper");
+                                        const createBtn = document.createElement("a");
+                                        createBtn.href = "/Admin/AboutBlog/Create";
+                                        createBtn.className = "btn btn-success mb-3";
+                                        createBtn.textContent = "Create";
+                                        wrapper.appendChild(createBtn);
+                                    }
+
+                                    swalWithBootstrapButtons.fire("Deleted!", "Blog has been deleted.", "success");
+                                } else {
+                                    swalWithBootstrapButtons.fire("Error!", "Something went wrong.", "error");
+                                }
+                            })
+                            .catch(() => {
+                                swalWithBootstrapButtons.fire("Error!", "Something went wrong.", "error");
+                            });
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                        swalWithBootstrapButtons.fire("Cancelled", "Blog is safe :)", "info");
+                    }
+                });
+            });
+        });
+    });
+</script>

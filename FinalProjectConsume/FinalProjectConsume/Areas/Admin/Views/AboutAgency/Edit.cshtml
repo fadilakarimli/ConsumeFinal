@@ -1,0 +1,37 @@
+﻿@model FinalProjectConsume.Models.AboutAgency.AboutAgencyEdit
+
+@{
+    ViewData["Title"] = "Edit About Agency";
+}
+
+<div class="container" style="margin-left:300px; margin-top:50px;">
+    <h2>Edit About Agency</h2>
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Subtitle"></label>
+            <input asp-for="Subtitle" class="form-control" />
+            <span asp-validation-for="Subtitle" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Desc"></label>
+            <textarea asp-for="Desc" class="form-control" rows="5"></textarea>
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Image">Select New Image</label>
+            <input asp-for="Image" type="file" class="form-control" />
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+    </form>
+</div>
